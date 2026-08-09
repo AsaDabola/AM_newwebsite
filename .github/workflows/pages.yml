@@ -1,0 +1,47 @@
+# Publishes the static site to GitHub Pages so it can be reviewed in a browser
+# without cloning or running anything locally.
+#
+# One-time setup: repository Settings -> Pages -> Build and deployment ->
+# Source: "GitHub Actions".
+name: Deploy site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - claude/am-website-design-overhaul-un8tyt
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it mid-publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out the branch
+        uses: actions/checkout@v4
+
+      # The site is committed as plain static HTML, so there is nothing to
+      # build here - the repository root is what gets published.
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
