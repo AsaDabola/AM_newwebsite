@@ -1,0 +1,141 @@
+/*
+Theme Name: AM International
+Theme URI: https://amintl.org
+Author: Apostolos Missions International
+Description: Custom theme for Apostolos Missions International. Dark, mission-forward design with an interactive globe on the homepage, a mega-menu header, and campus/event/ministry directories. No page builder and no external requests - fonts and scripts are served from the theme.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Text Domain: am-international
+Tags: nonprofit, custom-menu, featured-images, translation-ready, accessibility-ready
+*/
+
+/*
+ * WordPress requires this file to exist and to carry the header above, but the
+ * actual styles live in assets/css/main.css, which functions.php enqueues.
+ * Keeping them there means the static build and the theme share one stylesheet.
+ *
+ * Put any WordPress-specific overrides below - they load after main.css.
+ */
+
+/* ---- WordPress core markup classes ------------------------------------- */
+
+.alignleft {
+  float: left;
+  margin: 0.5rem 1.5rem 1rem 0;
+}
+
+.alignright {
+  float: right;
+  margin: 0.5rem 0 1rem 1.5rem;
+}
+
+.aligncenter {
+  display: block;
+  margin-inline: auto;
+}
+
+.alignwide {
+  max-width: min(100%, 1100px);
+  margin-inline: auto;
+}
+
+.alignfull {
+  max-width: none;
+}
+
+.wp-caption {
+  max-width: 100%;
+}
+
+.wp-caption-text,
+.wp-block-image figcaption {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+.screen-reader-text {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.screen-reader-text:focus {
+  position: static !important;
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: auto;
+}
+
+/* Admin bar sits above the sticky header. */
+body.admin-bar .header {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  body.admin-bar .header {
+    top: 46px;
+  }
+}
+
+/* ---- Editor-authored content -------------------------------------------- */
+
+.entry-content > * + * {
+  margin-top: var(--sp-5);
+}
+
+.entry-content img {
+  border-radius: var(--radius);
+}
+
+.entry-content figure {
+  margin: 0;
+}
+
+/* Pagination */
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  justify-content: center;
+  margin-top: var(--sp-8);
+}
+
+.pagination .page-numbers {
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  height: 44px;
+  padding-inline: 0.75rem;
+  border: 1px solid var(--line-light);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.pagination .page-numbers:hover,
+.pagination .page-numbers.current {
+  background: var(--brand-blue);
+  border-color: var(--brand-blue);
+  color: #fff;
+}
+
+/* Comments are disabled by default in this theme, but style the notice. */
+.no-comments {
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}

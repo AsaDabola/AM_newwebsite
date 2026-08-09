@@ -10,6 +10,18 @@ chapter finder, a give CTA and a fat footer — rendered in a dark, cinematic
 Everything ships as plain static HTML, CSS and JavaScript. No frameworks, no CDN,
 no build step required to host it.
 
+**Two ways to run it:**
+
+- **Static site** — the HTML in this directory. Host it anywhere; nothing to
+  maintain.
+- **WordPress theme** — `wp-theme/am-international/`, so AM staff keep editing
+  in the WordPress admin. Same design, same CSS/JS/globe; only the page
+  structure is PHP. See [`wp-theme/README.md`](wp-theme/README.md) for install
+  and setup.
+
+`assets/` is the source of truth for both — run `node tools/sync-theme-assets.js`
+after changing anything in it.
+
 ---
 
 ## Quick start
@@ -23,9 +35,10 @@ python3 -m http.server 8000
 To regenerate the site after editing content:
 
 ```bash
-node tools/build-pages.js        # rebuild all 20 HTML pages
-node tools/build-placeholders.js # regenerate placeholder artwork
-node tools/build-globe-data.js   # regenerate globe geometry (rarely needed)
+node tools/build-pages.js         # rebuild all 20 HTML pages
+node tools/build-placeholders.js  # regenerate placeholder artwork
+node tools/build-globe-data.js    # regenerate globe geometry (rarely needed)
+node tools/sync-theme-assets.js   # push assets/ into the WordPress theme
 ```
 
 Node 18+ is the only requirement, and only for the generators — the committed
