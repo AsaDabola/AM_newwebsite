@@ -1,0 +1,102 @@
+# Builds an installable WordPress theme zip and runs the theme's checks.
+#
+# WordPress expects a zip whose root is the theme folder itself, which is not
+# what GitHub's "Download ZIP" button produces - that gives you the whole
+# repository. This workflow packages the theme correctly.
+#
+# To get the file: Actions tab -> "Build WordPress theme zip" -> the most
+# recent run -> Artifacts -> am-international-theme.
+name: Build WordPress theme zip
+
+on:
+  push:
+    branches:
+      - main
+      - claude/am-website-design-overhaul-un8tyt
+    paths:
+      - 'wp-theme/**'
+      - 'assets/**'
+      - '.github/workflows/theme.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write # needed to attach the zip to a release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the branch
+        uses: actions/checkout@v4
+
+      - name: Show tool versions
+        run: |
+          php --version
+          node --version
+
+      # The static site and the theme share assets/. If they have drifted, the
+      # zip would ship stale CSS or JavaScript.
+      - name: Check theme assets are in sync with assets/
+        run: node tools/sync-theme-assets.js --check
+
+      - name: Lint every PHP file
+        run: |
+          fail=0
+          while IFS= read -r file; do
+            if ! php -l "$file" > /dev/null 2>&1; then
+              echo "::error file=$file::PHP syntax error"
+              php -l "$file" || true
+              fail=1
+            fi
+          done < <(find wp-theme -name '*.php')
+          if [ "$fail" -ne 0 ]; then exit 1; fi
+          echo "All PHP files parse."
+
+      # Renders the templates against a stub of the WordPress API and asserts
+      # the markup is what the design expects.
+      - name: Render the theme and run its assertions
+        run: php wp-theme/render-preview.php
+
+      - name: Build the theme zip
+        run: |
+          cd wp-theme
+          zip -r -q am-international.zip am-international \
+            -x '*.DS_Store' -x '__MACOSX/*'
+          unzip -l am-international.zip | head -20
+          echo "Zip size: $(du -h am-international.zip | cut -f1)"
+
+      - name: Upload the zip
+        uses: actions/upload-artifact@v4
+        with:
+          name: am-international-theme
+          path: wp-theme/am-international.zip
+          if-no-files-found: error
+          retention-days: 90
+
+      # Downloading an artifact from the Actions UI wraps it in a second zip,
+      # and WordPress rejects that with "the theme is missing the style.css
+      # stylesheet". A release asset downloads as the plain file, so this is
+      # the link to hand to whoever is installing the theme.
+      - name: Publish the zip as a downloadable release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG=theme-latest
+          NOTES="Install this file directly: WordPress -> Appearance -> Themes -> Add New -> Upload Theme.
+
+          Built from ${GITHUB_SHA} on $(date -u +'%Y-%m-%d %H:%M UTC').
+          Setup instructions: wp-theme/README.md"
+
+          if ! gh release view "$TAG" > /dev/null 2>&1; then
+            gh release create "$TAG" \
+              --title "AM International theme (latest build)" \
+              --notes "$NOTES" \
+              --prerelease \
+              --target "$GITHUB_SHA"
+          else
+            gh release edit "$TAG" --notes "$NOTES" --target "$GITHUB_SHA"
+          fi
+
+          gh release upload "$TAG" wp-theme/am-international.zip --clobber
+
+          echo "Direct download: https://github.com/${GITHUB_REPOSITORY}/releases/download/${TAG}/am-international.zip"
