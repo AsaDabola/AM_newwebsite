@@ -407,6 +407,10 @@ function the_content() { $o = get_post(); echo $o ? $o->post_content : ''; }
 function wp_link_pages( $a = array() ) {}
 function the_posts_pagination( $a = array() ) {}
 function is_front_page() { return ( $GLOBALS['am_view'] ?? '' ) === 'front'; }
+function is_paged() { return (bool) ( $GLOBALS['am_paged'] ?? false ); }
+function locate_template( $file ) {
+	return file_exists( THEME_DIR . '/' . $file ) ? THEME_DIR . '/' . $file : '';
+}
 function is_home() { return false; }
 function is_archive() { return false; }
 function is_search() { return false; }
@@ -571,6 +575,37 @@ $checks['balanced section tags'] = $count_tag( $home, 'section' ) === substr_cou
 $checks['network page renders finder']  = str_contains( $results['network.html'], 'data-chapter-list' );
 $checks['ministries archive has cards'] = str_contains( $results['ministries.html'], 'class="card__tag">Fellowship' );
 $checks['404 renders']                  = str_contains( $results['notfound.html'], 'went on mission' );
+
+/* ---- the page-builder override ------------------------------------------ */
+
+// Stands in for the template Elementor's "Full Width" page template returns.
+$builder_template = '/plugins/elementor/modules/page-templates/templates/header-footer.php';
+
+$GLOBALS['am_view']  = 'front';
+$GLOBALS['am_paged'] = false;
+$GLOBALS['am_mods']['am_home_force_template'] = 1;
+$checks['front page overrides a builder template'] =
+	am_force_front_page_template( $builder_template ) === THEME_DIR . '/front-page.php';
+
+$GLOBALS['am_mods']['am_home_force_template'] = 0;
+$checks['override respects its off switch'] =
+	am_force_front_page_template( $builder_template ) === $builder_template;
+$GLOBALS['am_mods']['am_home_force_template'] = 1;
+
+$GLOBALS['am_view'] = '';
+$checks['override leaves interior pages alone'] =
+	am_force_front_page_template( $builder_template ) === $builder_template;
+
+$GLOBALS['am_view']  = 'front';
+$GLOBALS['am_paged'] = true;
+$checks['override leaves the paged front page alone'] =
+	am_force_front_page_template( $builder_template ) === $builder_template;
+$GLOBALS['am_paged'] = false;
+
+$_GET['elementor-preview'] = 1;
+$checks['override steps aside for the Elementor editor'] =
+	am_force_front_page_template( $builder_template ) === $builder_template;
+unset( $_GET['elementor-preview'] );
 
 $failed = 0;
 foreach ( $checks as $name => $ok ) {
