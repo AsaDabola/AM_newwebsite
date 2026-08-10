@@ -407,7 +407,9 @@ function footer(depth) {
 function scripts(depth, { globe }) {
   const url = makeUrl(depth);
   const globeTags = globe
-    ? `\n<script src="${url('/assets/js/globe-data.js')}" defer></script>\n<script src="${url('/assets/js/globe.js')}" defer></script>`
+    ? `\n<script src="${url('/assets/js/globe-markers.js')}" defer></script>` +
+      `\n<script src="${url('/assets/js/globe-data.js')}" defer></script>` +
+      `\n<script src="${url('/assets/js/globe.js')}" defer></script>`
     : '';
   return `${globeTags}
 <script src="${url('/assets/js/main.js')}" defer></script>
