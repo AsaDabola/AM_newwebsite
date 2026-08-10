@@ -40,6 +40,7 @@ function am_settings() {
 	$settings = array(
 
 		/* ---- hero ---- */
+		'home_force_template' => array( 'hero', __( 'Use the AM homepage design', 'am-international' ), 'checkbox', 1, __( 'Keep this on so the theme\'s homepage wins over a page builder. Turn it off if you would rather Elementor (or another builder) control the front page.', 'am-international' ) ),
 		'hero_eyebrow'      => array( 'hero', __( 'Eyebrow', 'am-international' ), 'text', 'Apostolos — one who is sent' ),
 		'hero_title'        => array( 'hero', __( 'Headline (plain part)', 'am-international' ), 'text', 'Future Begins from' ),
 		'hero_title_accent' => array( 'hero', __( 'Headline (highlighted part)', 'am-international' ), 'text', 'Where We Are' ),

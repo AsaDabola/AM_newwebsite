@@ -35,6 +35,19 @@ and flushes permalinks automatically.
 
 ### 1. Front page
 
+If the current homepage was built with Elementor, you do **not** need to change
+anything: the theme reasserts its own homepage over a page builder. Elementor's
+"Full Width" page template and Elementor Pro's Theme Builder both replace
+`front-page.php`, which would otherwise leave you looking at the old homepage
+wrapped in the new header and footer.
+
+To hand the front page back to Elementor, untick **Customize → AM homepage →
+Hero + globe → Use the AM homepage design**.
+
+The rest of this section still applies if you would rather point the homepage at
+a fresh page:
+
+
 **Settings → Reading → Your homepage displays → A static page.** Set *Homepage*
 to a page called Home (any page — the template ignores its content) and *Posts
 page* to a page called News.
