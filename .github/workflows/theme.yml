@@ -20,7 +20,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write # needed to attach the zip to a release
 
 jobs:
   build:
@@ -72,3 +72,31 @@ jobs:
           path: wp-theme/am-international.zip
           if-no-files-found: error
           retention-days: 90
+
+      # Downloading an artifact from the Actions UI wraps it in a second zip,
+      # and WordPress rejects that with "the theme is missing the style.css
+      # stylesheet". A release asset downloads as the plain file, so this is
+      # the link to hand to whoever is installing the theme.
+      - name: Publish the zip as a downloadable release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG=theme-latest
+          NOTES="Install this file directly: WordPress -> Appearance -> Themes -> Add New -> Upload Theme.
+
+          Built from ${GITHUB_SHA} on $(date -u +'%Y-%m-%d %H:%M UTC').
+          Setup instructions: wp-theme/README.md"
+
+          if ! gh release view "$TAG" > /dev/null 2>&1; then
+            gh release create "$TAG" \
+              --title "AM International theme (latest build)" \
+              --notes "$NOTES" \
+              --prerelease \
+              --target "$GITHUB_SHA"
+          else
+            gh release edit "$TAG" --notes "$NOTES" --target "$GITHUB_SHA"
+          fi
+
+          gh release upload "$TAG" wp-theme/am-international.zip --clobber
+
+          echo "Direct download: https://github.com/${GITHUB_REPOSITORY}/releases/download/${TAG}/am-international.zip"
