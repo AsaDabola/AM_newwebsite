@@ -74,13 +74,13 @@ function am_settings() {
 
 		/* ---- mission ---- */
 		'mission_eyebrow'     => array( 'mission', __( 'Eyebrow', 'am-international' ), 'text', 'Our mission' ),
-		'mission_quote'       => array( 'mission', __( 'Quote (plain part)', 'am-international' ), 'textarea', 'Apostolos Missions’ mission is to' ),
-		'mission_quote_accent'=> array( 'mission', __( 'Quote (highlighted part)', 'am-international' ), 'text', 'preach Jesus and Him crucified' ),
-		'mission_quote_end'   => array( 'mission', __( 'Quote (remainder)', 'am-international' ), 'textarea', '— fostering a Christ-centred network of young Christians for the mobilisation of campus mission.' ),
+		'mission_quote'       => array( 'mission', __( 'Quote (plain part)', 'am-international' ), 'textarea', 'Preach the gospel, make disciples,' ),
+		'mission_quote_accent'=> array( 'mission', __( 'Quote (highlighted part)', 'am-international' ), 'text', 'equip leaders, and send them out.' ),
+		'mission_quote_end'   => array( 'mission', __( 'Quote (remainder)', 'am-international' ), 'textarea', '' ),
 		'mission_link'        => array( 'mission', __( 'Link', 'am-international' ), 'url', '' ),
 		'mission_link_label'  => array( 'mission', __( 'Link label', 'am-international' ), 'text', 'Read the full mission statement' ),
-		'mission_side'        => array( 'mission', __( 'Side column', 'am-international' ), 'textarea', 'The name apostolos is the Greek word for apostle. It means “one who is sent on a mission.”' ),
-		'mission_side_body'   => array( 'mission', __( 'Side column, second paragraph', 'am-international' ), 'textarea', 'What began as a small group of passionate young students in Los Angeles, California, eager to spread the gospel and make Jesus known, has become a global organisation working across university campuses around the world.' ),
+		'mission_side'        => array( 'mission', __( 'Side column', 'am-international' ), 'textarea', 'Apostolos Missions International is an interdenominational ministry committed to spreading the gospel to the ends of the earth, testifying to the eternal love of the Lord.' ),
+		'mission_side_body'   => array( 'mission', __( 'Side column, second paragraph', 'am-international' ), 'textarea', 'The name apostolos (ἀπόστολος) is the Greek word for apostle. It means “one who is sent on a mission” or “messenger.”' ),
 
 		/* ---- media ---- */
 		'media_eyebrow' => array( 'media', __( 'Eyebrow', 'am-international' ), 'text', 'Media' ),
