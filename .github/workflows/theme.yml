@@ -1,0 +1,74 @@
+# Builds an installable WordPress theme zip and runs the theme's checks.
+#
+# WordPress expects a zip whose root is the theme folder itself, which is not
+# what GitHub's "Download ZIP" button produces - that gives you the whole
+# repository. This workflow packages the theme correctly.
+#
+# To get the file: Actions tab -> "Build WordPress theme zip" -> the most
+# recent run -> Artifacts -> am-international-theme.
+name: Build WordPress theme zip
+
+on:
+  push:
+    branches:
+      - main
+      - claude/am-website-design-overhaul-un8tyt
+    paths:
+      - 'wp-theme/**'
+      - 'assets/**'
+      - '.github/workflows/theme.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the branch
+        uses: actions/checkout@v4
+
+      - name: Show tool versions
+        run: |
+          php --version
+          node --version
+
+      # The static site and the theme share assets/. If they have drifted, the
+      # zip would ship stale CSS or JavaScript.
+      - name: Check theme assets are in sync with assets/
+        run: node tools/sync-theme-assets.js --check
+
+      - name: Lint every PHP file
+        run: |
+          fail=0
+          while IFS= read -r file; do
+            if ! php -l "$file" > /dev/null 2>&1; then
+              echo "::error file=$file::PHP syntax error"
+              php -l "$file" || true
+              fail=1
+            fi
+          done < <(find wp-theme -name '*.php')
+          if [ "$fail" -ne 0 ]; then exit 1; fi
+          echo "All PHP files parse."
+
+      # Renders the templates against a stub of the WordPress API and asserts
+      # the markup is what the design expects.
+      - name: Render the theme and run its assertions
+        run: php wp-theme/render-preview.php
+
+      - name: Build the theme zip
+        run: |
+          cd wp-theme
+          zip -r -q am-international.zip am-international \
+            -x '*.DS_Store' -x '__MACOSX/*'
+          unzip -l am-international.zip | head -20
+          echo "Zip size: $(du -h am-international.zip | cut -f1)"
+
+      - name: Upload the zip
+        uses: actions/upload-artifact@v4
+        with:
+          name: am-international-theme
+          path: wp-theme/am-international.zip
+          if-no-files-found: error
+          retention-days: 90

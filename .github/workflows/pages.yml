@@ -34,8 +34,12 @@ jobs:
 
       # The site is committed as plain static HTML, so there is nothing to
       # build here - the repository root is what gets published.
+      # enablement: true turns Pages on via the API if it has never been
+      # switched on, instead of failing with "Get Pages site failed".
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
