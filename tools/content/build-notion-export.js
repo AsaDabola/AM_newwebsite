@@ -8,11 +8,16 @@
  * with Elementor keep their copy as JSON in the _elementor_data postmeta, so the
  * widget tree is walked in document order and each widget rendered.
  *
- * Notion import: File -> Import -> Markdown & CSV, then select the folder (or
- * the zip). Folders become nested pages.
+ * Notion import: Settings -> Import, then drop the zip on "Import your
+ * content". Notion turns each file inside into its own page and each folder
+ * into a parent page.
  *
  * Usage:
- *   node tools/content/build-notion-export.js <export.xml> [outputDir]
+ *   node tools/content/build-notion-export.js <export.xml> [outputDir] [flags]
+ *
+ *   --pages-only  just the published pages, skipping the news archive and
+ *                 drafts - much faster to import and review
+ *   --single      additionally write one combined Markdown file
  *
  * The output is deliberately written outside the repository by default: it is
  * the ministry's own site content, including drafts.
@@ -21,10 +26,19 @@
 const fs = require('fs');
 const path = require('path');
 
-const [, , inputFile, outDirArg] = process.argv;
+const args = process.argv.slice(2);
+const flags = new Set(args.filter((a) => a.startsWith('--')));
+const [inputFile, outDirArg] = args.filter((a) => !a.startsWith('--'));
+
+// --pages-only  skip news posts and drafts, keeping just the published pages
+// --single      also write one combined Markdown file of everything included
+const PAGES_ONLY = flags.has('--pages-only');
+const SINGLE = flags.has('--single');
 
 if (!inputFile) {
-  console.error('usage: node tools/content/build-notion-export.js <export.xml> [outputDir]');
+  console.error(
+    'usage: node tools/content/build-notion-export.js <export.xml> [outputDir] [--pages-only] [--single]'
+  );
   process.exit(1);
 }
 
@@ -433,8 +447,12 @@ for (const item of items) {
   if (!['page', 'post'].includes(item.type)) continue;
   if (item.status === 'trash' || item.status === 'auto-draft') continue;
 
-  const body = bodyOf(item);
   const isDraft = item.status !== 'publish';
+
+  // --pages-only keeps just the published pages: no news archive, no drafts.
+  if (PAGES_ONLY && (isDraft || item.type !== 'page')) continue;
+
+  const body = bodyOf(item);
   const folder = isDraft ? 'Drafts' : item.type === 'page' ? 'Pages' : 'News';
 
   let name = safeName(item.title);
@@ -505,6 +523,23 @@ write(
       ? `\n_…and ${written.News.length - 60} more in the News folder._\n`
       : '')
 );
+
+/* ---- optional single combined document ---- */
+
+if (SINGLE) {
+  const all = [...written.Pages, ...written.Drafts, ...written.News].sort((a, b) =>
+    a.title.localeCompare(b.title)
+  );
+  const combined =
+    `# Apostolos Missions International — site content\n\n` +
+    `${all.length} pages from amintl.org, in one document.\n\n---\n\n` +
+    all
+      .map((r) => fs.readFileSync(path.join(OUT, r.file), 'utf8').trim())
+      .join('\n\n---\n\n') +
+    '\n';
+  write('All pages (single file).md', combined);
+  console.log(`  single file: ${(combined.length / 1024).toFixed(0)} KB`);
+}
 
 const total = written.Pages.length + written.News.length + written.Drafts.length;
 console.log(
