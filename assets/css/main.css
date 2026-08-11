@@ -2436,6 +2436,164 @@ a.card--dark:hover {
   margin: 0;
 }
 
+/* ------------------------------------------- 19b interior page patterns -- */
+
+/* Wide image below the page header, as on the journey pages. */
+.page-figure {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface-panel);
+  aspect-ratio: 21 / 9;
+  margin-bottom: var(--sp-7);
+}
+
+.page-figure img,
+.page-figure svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-figure__caption {
+  margin-top: var(--sp-3);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+/* Action cards: icon, heading, one line of copy, outline button. Used for the
+   two-to-four concrete things a page wants the reader to do. */
+.action-grid {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: var(--sp-5);
+  background: var(--surface-paper);
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius);
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s var(--ease);
+}
+
+.action-card:hover {
+  border-color: var(--brand-blue);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.action-card__icon {
+  width: 28px;
+  height: 28px;
+  color: var(--brand-blue);
+}
+
+.action-card h3 {
+  margin: 0;
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+.action-card p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+}
+
+.action-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Sand sections need their cards to stay legible against the tint. */
+.section--sand .action-card {
+  background: var(--surface-paper);
+}
+
+/* "Ready to go deeper?" band that hands the reader to the next page. */
+.next-step {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  margin-top: var(--sp-7);
+  padding: var(--sp-5) var(--sp-6);
+  background: color-mix(in srgb, var(--brand-blue) 10%, #fff);
+  border-radius: var(--radius);
+}
+
+.next-step__label {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--brand-blue);
+  margin: 0;
+}
+
+/* Step list for programmes: a numbered spine with room for detail. */
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+  display: grid;
+  gap: var(--sp-5);
+}
+
+.steps li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--sp-5);
+  align-items: start;
+  padding-bottom: var(--sp-5);
+  border-bottom: 1px solid var(--line-light-soft);
+}
+
+.steps li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.steps li::before {
+  content: counter(step, decimal-leading-zero);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--brand-blue);
+  line-height: 1.2;
+  min-width: 2.5rem;
+}
+
+.steps h3 {
+  margin: 0 0 0.35rem;
+  font-size: var(--fs-h4);
+}
+
+.steps p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* Marks copy the ministry still has to supply, so gaps are obvious in review
+   and easy to find before launch. */
+.needs-content {
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  border-radius: var(--radius-sm);
+  background: #fff4d6;
+  border: 1px solid #e8c766;
+  color: #7a5800;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
 /* ------------------------------------------ 20 motion, a11y, print ------- */
 
 /* Scroll reveal. Elements start hidden only when JS is available, so the page

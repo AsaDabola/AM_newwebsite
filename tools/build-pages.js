@@ -73,6 +73,54 @@ function accordionItem({ q, a }) {
         </div>`;
 }
 
+/* --------------------------------------------- interior page components -- */
+
+/** Wide image under the page header. */
+function pageFigure({ img, alt, caption, url }) {
+  return `<figure class="page-figure" data-reveal>
+        <img src="${url(img)}" alt="${alt || ''}" loading="lazy" width="1200" height="800">
+      </figure>${caption ? `<p class="page-figure__caption">${caption}</p>` : ''}`;
+}
+
+/** Icon, heading, one line, outline button. The concrete next actions. */
+function actionCard({ icon, title, text, cta, href, url }) {
+  return `<div class="action-card" data-reveal>
+          <span class="action-card__icon">${ICONS[icon]}</span>
+          <h3>${title}</h3>
+          <p>${text}</p>
+          ${cta ? `<a class="btn btn--ghost" href="${url(href)}">${cta}</a>` : ''}
+        </div>`;
+}
+
+/** Hands the reader on to the next page in a sequence. */
+function nextStep({ label, cta, href, url }) {
+  return `<div class="next-step" data-reveal>
+        <p class="next-step__label">${label}</p>
+        <a class="link-arrow" href="${url(href)}">${cta} ${ICONS.arrow}</a>
+      </div>`;
+}
+
+/** Numbered steps for programme pages. */
+function stepList(steps) {
+  return `<ol class="steps" data-reveal>
+        ${steps
+          .map(
+            (s) => `<li>
+          <div>
+            <h3>${s.title}</h3>
+            <p>${s.text}</p>
+          </div>
+        </li>`
+          )
+          .join('\n        ')}
+      </ol>`;
+}
+
+/** Flags copy the ministry still needs to supply. */
+function needs(what) {
+  return `<span class="needs-content">Needs from AM: ${what}</span>`;
+}
+
 /** Give / partner band, repeated at the foot of most pages. */
 function ctaBand(url) {
   return `
@@ -151,6 +199,13 @@ const ABOUT_SUBNAV = [
   ['History', '/about/history/'],
   ['Leadership', '/about/leadership/'],
   ['Ralph D. Winter', '/about/legacy/']
+];
+
+const JOURNEY_SUBNAV = [
+  ['Connect', '/get-involved/connect/'],
+  ['Grow', '/get-involved/grow/'],
+  ['Lead', '/get-involved/lead/'],
+  ['Sent', '/get-involved/sent/'],
 ];
 
 const DO_SUBNAV = [
@@ -996,6 +1051,105 @@ ${STAGES.map(
 ${ctaBand(url)}`
   });
 
+  /* ---- the four journey pages: Connect, Grow, Lead, Sent ---- */
+
+  // Copy condensed from AM's existing Connect, Grow and Lead pages. Sent has
+  // no published page yet, so its detail is flagged rather than invented.
+  const JOURNEY = [
+    {
+      slug: 'connect',
+      title: 'Connect',
+      heading: 'Stay connected',
+      lede: 'AM offers various Bible study programs that nurture our spiritual life and relationship with the Lord Jesus Christ.',
+      img: '/assets/img/ministry-la-familia.svg',
+      intro: 'God made us to connect with others — to be understood, accepted and cherished. We believe the Gospel builds the foundation of true fellowship among us, and that shared joy in Jesus is the ground we stand on together.',
+      actions: [
+        { icon: 'mail', title: 'Subscribe', text: 'Receive AM program updates and news from amintl.org and amacademy.org.', cta: 'Subscribe', href: '/contact/' },
+        { icon: 'users', title: 'Spiritual counseling', text: 'Meet an AM staff member to ask questions about your personal faith journey.', cta: 'Sign up', href: 'https://www.amacademy.org/introductory-meeting' },
+        { icon: 'book', title: 'Online Bible study', text: 'Diverse tracks, from Phase 1 Sola Fide through the Bible Core overview and the Gospel books.', cta: 'Join', href: '/what-we-do/bible-study/' },
+        { icon: 'pin', title: 'Local chapter activities', text: 'Prayer meetings, group Bible study, fellowships and weekend activities near you.', cta: 'Find a chapter', href: '/network/' },
+      ],
+      next: { label: 'Ready to go deeper?', cta: 'Explore Grow', href: '/get-involved/grow/' },
+    },
+    {
+      slug: 'grow',
+      title: 'Grow',
+      heading: 'Grow with AM',
+      lede: 'Join our Group Activities and mature together in the fellowship of truth. Our Group programs provide high-quality experiences for every student to gain spiritual strength.',
+      img: '/assets/img/ministry-academy.svg',
+      intro: 'Just as we mature through stages in childhood, we pass milestones in spiritual maturity: reborn through the atoning sacrifice of Jesus, matured by truth and spirit, and brought into fruitfulness as our unity with Christ deepens. AM builds programs around all three.',
+      actions: [
+        { icon: 'users', title: 'Group activities', text: 'Diverse opportunities to hear the Word, pray together, fellowship and serve.', cta: 'See activities', href: '/ministries/' },
+        { icon: 'book', title: 'Bible Study Program', text: 'The 5-phase path, from the basics of salvation to the whole sweep of Scripture.', cta: 'Start the program', href: '/what-we-do/bible-study/' },
+        { icon: 'globe', title: 'AM Academy', text: 'Study Scripture, missiology and cross-cultural ministry alongside your degree.', cta: 'Explore', href: '/academy/' },
+      ],
+      next: { label: 'Ready to serve?', cta: 'Explore Lead', href: '/get-involved/lead/' },
+    },
+    {
+      slug: 'lead',
+      title: 'Lead',
+      heading: 'Lead with AM',
+      lede: 'AM is happy to welcome students interested in volunteering and serving through their God given talents in various departments.',
+      img: '/assets/img/ministry-business.svg',
+      intro: 'As we grow, we want to serve others on their way to Jesus — and in serving we grow deeper in the love of Christ. Leading takes wisdom, prayer, sacrifice and patience, and it is where gifts are discovered and confirmed.',
+      actions: [
+        { icon: 'heart', title: 'Volunteer', text: 'Serve your chapter and the wider ministry with the time and skills you have.', cta: 'Volunteer', href: '/give/' },
+        { icon: 'users', title: 'Chapter staff', text: 'Train to lead local programs, gatherings and meetings on your campus.', cta: 'Chapter staff', href: '/get-involved/chapter-affiliation/' },
+        { icon: 'send', title: 'Internship', text: 'Work alongside AM staff and turn training into practice.', cta: 'Apply', href: '/contact/' },
+        { icon: 'book', title: 'Bible teachers', text: 'Teach the Word to students beginning their journey.', cta: 'Become a teacher', href: '/what-we-do/bible-study/' },
+      ],
+      next: { label: 'Ready to be sent?', cta: 'Explore Sent', href: '/get-involved/sent/' },
+    },
+    {
+      slug: 'sent',
+      title: 'Sent',
+      heading: 'Sent with AM',
+      lede: 'AM will continue to walk with you until your precious calling of “being sent” is fulfilled in your life even after your graduation.',
+      img: '/assets/img/ministry-athletics.svg',
+      intro: 'Being sent is where the whole path leads. AM stays with students beyond graduation, as calling turns into a life.',
+      actions: [
+        { icon: 'globe', title: 'Short-term missions', text: 'PLACEHOLDER — destinations, dates and how to apply.', cta: 'Find out more', href: '/events/' },
+        { icon: 'users', title: 'Alumni Connect', text: 'PLACEHOLDER — how AM stays with graduates and what the network offers.', cta: 'Alumni', href: '/contact/' },
+        { icon: 'send', title: 'Student missionary', text: 'PLACEHOLDER — what training as a student missionary involves.', cta: 'Talk to us', href: '/contact/' },
+      ],
+      next: { label: 'Want to support someone being sent?', cta: 'Give', href: '/give/' },
+      flag: 'the real Sent copy — this page has no published equivalent on the current site',
+    },
+  ];
+
+  JOURNEY.forEach((j) => {
+    add({
+      file: `get-involved/${j.slug}/index.html`,
+      depth: 2,
+      canonical: `/get-involved/${j.slug}/`,
+      active: '/get-involved/',
+      title: j.heading,
+      description: j.lede,
+      build: (url) => `
+${pageHero({
+  title: j.heading,
+  lede: j.lede,
+  crumbs: [['Home', '/'], ['Get Involved', '/get-involved/'], [j.title]],
+  url,
+})}
+${subnav(JOURNEY_SUBNAV, `/get-involved/${j.slug}/`, url)}
+<section class="section">
+  <div class="container">
+    ${pageFigure({ img: j.img, alt: '', url })}
+    <div class="prose" data-reveal style="margin-bottom:3rem">
+      <p class="lede">${j.intro}</p>
+      ${j.flag ? `<p>${needs(j.flag)}</p>` : ''}
+    </div>
+    <div class="action-grid">
+      ${j.actions.map((a) => actionCard({ ...a, url })).join('\n      ')}
+    </div>
+    ${nextStep({ ...j.next, url })}
+  </div>
+</section>
+${ctaBand(url)}`,
+    });
+  });
+
   /* ---- ministries ---- */
   add({
     file: 'ministries/index.html',
@@ -1314,6 +1468,146 @@ ${pageHero({
   </div>
 </section>
 ${ctaBand(url)}`
+  });
+
+  /* ---- page template style guide ---- */
+  add({
+    file: 'templates/index.html',
+    depth: 1,
+    canonical: '/templates/',
+    title: 'Page templates',
+    description:
+      'The six interior page patterns every AM page is built from, with the components each one uses.',
+    build: (url) => `
+${pageHero({
+  title: 'Page templates',
+  lede: 'Every interior page is one of six patterns. Pick the closest one, fill in the parts, and the page matches the rest of the site without any design decisions.',
+  crumbs: [['Home', '/'], ['Page templates']],
+  url,
+})}
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Pattern A &middot; Journey</p>
+      <h2>Connect, Grow, Lead, Sent</h2>
+      <p class="lede">A step in a sequence. Sibling tabs across the top, one image, a short opening, then the concrete things a reader can do — and a band handing them to the next step.</p>
+    </div>
+    <div class="prose" data-reveal>
+      <ol>
+        <li><strong>Page header</strong> — title and one-sentence summary</li>
+        <li><strong>Tabs</strong> — the four siblings, current one marked</li>
+        <li><strong>Figure</strong> — one wide image</li>
+        <li><strong>Opening</strong> — two or three sentences, no more</li>
+        <li><strong>Action cards</strong> — three or four, each with a button</li>
+        <li><strong>Next step</strong> — one link onward</li>
+      </ol>
+      <p><a href="${url('/get-involved/connect/')}">See it live on Connect &rarr;</a></p>
+    </div>
+    <div class="action-grid" style="margin-top:2.5rem">
+      ${actionCard({ icon: 'mail', title: 'Action card', text: 'Icon, heading, one line of copy, one button. Never more than one line.', cta: 'Button', href: '/templates/', url })}
+      ${actionCard({ icon: 'book', title: 'Three or four', text: 'Fewer than three looks thin; more than four stops being a choice.', cta: 'Button', href: '/templates/', url })}
+      ${actionCard({ icon: 'pin', title: 'Always a button', text: 'If a card has nowhere to send the reader, it should not be a card.', cta: 'Button', href: '/templates/', url })}
+    </div>
+    ${nextStep({ label: 'Ready to go deeper?', cta: 'Next step band', href: '/templates/', url })}
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Pattern B &middot; Article</p>
+      <h2>Who We Are, Mission, History, Statement of Faith</h2>
+      <p class="lede">Pages that are mostly reading. One column, generous measure, a pull quote to break the run of text, and a section subnav so the group hangs together.</p>
+    </div>
+    <div class="prose" data-reveal>
+      <p>Body copy sits in a single column capped at about 70 characters a line, which is where reading speed peaks. Headings break it into scannable sections.</p>
+      <blockquote>A pull quote lifts the one sentence that matters and gives the eye somewhere to rest.</blockquote>
+      <p>Use the timeline component for anything chronological, and the accordion for articles of faith or questions where readers want one answer rather than all of them.</p>
+      <p><a href="${url('/about/')}">See it live on Who We Are &rarr;</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Pattern C &middot; Programme</p>
+      <h2>Bible Study Program, AM Academy, Internship</h2>
+      <p class="lede">Anything with stages. A numbered spine carries the reader through, then an accordion answers the practical questions.</p>
+    </div>
+    ${stepList([
+      { title: 'Numbered step', text: 'One heading and two or three sentences. The number is generated, so steps can be reordered freely.' },
+      { title: 'As many as the programme has', text: 'Five phases, four themes, three terms — the spine stretches to fit.' },
+      { title: 'Ends in an action', text: 'The last step should be the one that enrols, applies or gets in touch.' },
+    ])}
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Pattern D &middot; Directory</p>
+      <h2>Our Network, Ministries, Leadership</h2>
+      <p class="lede">Many similar things. A search box when the list runs past about fifteen entries, a card grid when each entry has a picture, a plain list when it does not.</p>
+    </div>
+    <div class="grid grid--3">
+      ${card({ href: '/ministries/', img: '/assets/img/ministry-worship.svg', alt: '', tag: 'Card', title: 'Grid entry', text: 'Image, tag, title, one line. Used when entries have photography.', url })}
+      ${card({ href: '/network/', img: '/assets/img/feature-chapters.svg', alt: '', tag: 'Search', title: 'Filtered list', text: 'The chapter finder pattern: type-ahead filtering over a long list.', url })}
+      ${card({ href: '/about/leadership/', img: '/assets/img/person-2.svg', alt: '', tag: 'People', title: 'People grid', text: 'Square portrait, name, role, one sentence.', url })}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Pattern E &middot; Action</p>
+      <h2>Give, Contact, Registration</h2>
+      <p class="lede">Pages with one job. Say what happens next, keep the form short, and put nothing on the page that competes with it.</p>
+    </div>
+    <div class="prose" data-reveal>
+      <ul>
+        <li>One primary action, stated in the heading</li>
+        <li>Form fields kept to what is genuinely needed</li>
+        <li>No give band at the foot — it would compete with the page itself</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow eyebrow--on-dark">Pattern F &middot; Landing</p>
+      <h2>Home, and section fronts</h2>
+      <p class="lede">Alternating bands: dark, light, dark. Each band does one job and hides itself when it has no content, so a half-filled site still looks deliberate.</p>
+    </div>
+    <div class="prose" data-reveal>
+      <p style="color:var(--text-on-dark-muted)">Bands available: hero with globe, quick links, programme, card row, mission, media, events, chapter finder, legacy, give, newsletter.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">House rules</p>
+      <h2>What keeps it consistent.</h2>
+    </div>
+    <div class="prose" data-reveal>
+      <ul>
+        <li><strong>One idea per band.</strong> If a section needs two headings, it is two sections.</li>
+        <li><strong>Openings are short.</strong> Two or three sentences, then show rather than tell.</li>
+        <li><strong>Every page ends somewhere.</strong> A next step, an action card, or the give band — never a dead stop.</li>
+        <li><strong>Buttons say what happens.</strong> "Find a chapter", not "Click here".</li>
+        <li><strong>Empty beats filler.</strong> A band with nothing to say is switched off, not padded.</li>
+        <li><strong>Flag what is missing.</strong> Copy the ministry still owes shows as ${needs('the specific thing needed')} so it cannot ship by accident.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+${ctaBand(url)}`,
   });
 
   /* ---- 404 ---- */
