@@ -14,7 +14,7 @@ rendered as a reference in `docs/country-list.md`.
 | Platform | **Stay on WordPress.** Multisite in subdirectory mode |
 | Shared content | A global-content layer, so inherited copy is written once |
 | Fellowship platform | One network per fellowship, all on the same codebase |
-| Hosting | **Cloudways**, with Cloudflare in front |
+| Hosting | **Cloudways**, Hybrid stack, with Cloudflare in front — see `docs/hosting-decision.md` |
 | Language | Translate the frame per language, not per country |
 | Rollout | Three pilots, then four waves |
 
@@ -228,6 +228,12 @@ volunteer-heavy team, managed hosting is not a luxury. The price gap is roughly
 $30 a month; the gap in staff time is hours every month, plus the risk that the
 one person who configured the server moves on.
 
+Vercel and WordPress.com were also evaluated and both fail the compatibility
+screen — Vercel does not run PHP, and WordPress.com does not support Multisite
+on any plan. The full four-way comparison, the three-year cost model, and two
+configuration traps that would break subdirectory Multisite on Cloudways are in
+**`docs/hosting-decision.md`**.
+
 **Cloudflare in front, on the free tier.** Most of this audience is in Nairobi,
 Manila, Lagos and Lima. Edge caching is the single largest performance gain
 available, and it costs nothing.
@@ -372,7 +378,7 @@ list is settled — neither waits for the platform.
 | 4 | latin.amintl.org — fold in, or keep separate | Wave 1 | Leadership |
 | 5 | Which ~20 languages get a translated frame | Wave 1 | Leadership |
 | 6 | A named owner per country | The pilots | Regional leaders |
-| 7 | Cloudways or Lightsail | Wave 0 | Leadership |
+| 7 | ~~Cloudways or Lightsail~~ — **decided: Cloudways**, see `docs/hosting-decision.md` | — | Done |
 | 8 | Is this AM's network only, or the shared platform for all ten fellowships | Scope and budget | Leadership |
 
 Decisions 1, 5 and 8 stall the programme. The rest can be settled while
