@@ -18,8 +18,64 @@ const fs = require('fs');
 const path = require('path');
 const { COUNTRIES } = require('./countries.js');
 const { buildRoutes, validate } = require('./routes.js');
+const CHAPTERS = require('./chapters.js');
 
 const OUT = path.join(__dirname, '..', '..', 'data', 'country-seed.json');
+
+/**
+ * Chapter records name their country as it appears on the current site.
+ * These are the ones that do not match the mission list spelling.
+ */
+const CHAPTER_COUNTRY_ALIASES = {
+  usa: 'United States',
+  uk: 'United Kingdom',
+  'dr congo': 'Democratic Republic of the Congo',
+  'democratic republic of the congo': 'Democratic Republic of the Congo',
+};
+
+/** "New Jersey, USA" -> "United States"; "Kenya" -> "Kenya". */
+function chapterCountry(raw) {
+  const last = String(raw).split(',').pop().trim();
+  return CHAPTER_COUNTRY_ALIASES[last.toLowerCase()] || last;
+}
+
+/**
+ * Country name -> entry number. Covers grouped entries too, so a Kenyan
+ * chapter attaches to the East Federal Africa record.
+ */
+const ENTRY_BY_COUNTRY = new Map();
+for (const entry of COUNTRIES) {
+  for (const name of entry.covers || [entry.name]) {
+    if (!ENTRY_BY_COUNTRY.has(name)) ENTRY_BY_COUNTRY.set(name, entry.no);
+  }
+}
+
+/** entryNo -> the chapters AM already has there. */
+const CHAPTERS_BY_ENTRY = new Map();
+const unmatchedChapters = [];
+
+for (const row of Object.values(CHAPTERS)) {
+  const [, city, rawCountry, , , kind] = row;
+  if (kind === 'Headquarters') continue; // HQ is not a country chapter
+
+  const country = chapterCountry(rawCountry);
+  const entryNo = ENTRY_BY_COUNTRY.get(country);
+
+  if (!entryNo) {
+    unmatchedChapters.push(`${city}, ${country}`);
+    continue;
+  }
+
+  if (!CHAPTERS_BY_ENTRY.has(entryNo)) CHAPTERS_BY_ENTRY.set(entryNo, []);
+  CHAPTERS_BY_ENTRY.get(entryNo).push({
+    city,
+    country,
+    university: null, //  needs AM
+    meetingDay: null, //  needs AM
+    meetingTime: null, //  needs AM
+    email: null, //  needs AM — see content-pack/12-gaps.md item B5
+  });
+}
 
 const routes = buildRoutes();
 const problems = validate(routes);
@@ -57,7 +113,7 @@ const rows = COUNTRIES.map((entry) => {
     leaderName: null, //  required before publish
     leaderRole: null,
     locale: null, //  required before publish — which language this site is in
-    chapters: [], //  { city, university, meetingDay, meetingTime, email }
+    chapters: CHAPTERS_BY_ENTRY.get(entry.no) || [], //  pre-filled from the current site
     photos: [],
 
     /* ---- who may edit this row ------------------------------------------ */
@@ -71,10 +127,6 @@ const rows = COUNTRIES.map((entry) => {
 /** Publish gate, from content-pack/11-country-site-template.md. */
 const REQUIRED = ['contactEmail', 'leaderName', 'locale', 'owner'];
 
-const readiness = rows.map((r) => ({
-  name: r.name,
-  missing: REQUIRED.filter((f) => !r[f]).concat(r.chapters.length ? [] : ['chapters']),
-}));
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(
@@ -87,12 +139,28 @@ fs.writeFileSync(
 );
 
 console.log(`wrote ${OUT}`);
+const withChapters = rows.filter((r) => r.chapters.length > 0);
+const chapterCount = rows.reduce((n, r) => n + r.chapters.length, 0);
+const publishable = rows.filter((r) => REQUIRED.every((f) => r[f]) && r.chapters.length);
+
 console.log(`${rows.length} country records covering ${claimed.size} paths`);
 console.log(`${rows.filter((r) => r.covers).length} of them are grouped sites`);
 console.log(
-  `\nnone are publishable yet — every row is missing ${REQUIRED.join(', ')} and chapters.`
+  `${withChapters.length} have chapters pre-filled from the current site (${chapterCount} chapters)`
 );
-console.log('that is expected: those are the six intake fields AM has to collect.');
+console.log(`${rows.length - withChapters.length} will render the "no chapter yet" state`);
+console.log(
+  `\n${publishable.length} publishable. Every row still needs ${REQUIRED.join(', ')}.`
+);
+console.log('that is expected: those are the intake fields AM has to collect.');
+
+if (unmatchedChapters.length) {
+  console.log(
+    `\n${unmatchedChapters.length} existing chapter(s) in countries not on the mission list:`
+  );
+  unmatchedChapters.forEach((c) => console.log(`  ${c}`));
+  console.log('  they have no country page. See content-pack/12-gaps.md item C6.');
+}
 const orphans = rows.filter((r) => r.paths.length === 0);
 if (orphans.length) {
   console.log(`\n${orphans.length} record(s) with no URL — a path collision took theirs:`);

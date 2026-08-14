@@ -1,8 +1,10 @@
 # The Vercel stack — and whether you need Neon
 
-Short answer on Neon: **yes, you need a database — but not because of Vercel.**
-You need it because 68 country teams have to edit their own sites, and people
-who are not developers cannot edit content that lives in a Git repository.
+Short answer on Neon: **not to give 75 sites different content — that already
+works with no database.** You need one eventually so 68 country teams can edit
+their own sites, because people who are not developers cannot edit content that
+lives in a Git repository. Until AM has collected their intake data there is
+nothing for them to edit, so it can wait.
 
 ---
 
@@ -40,9 +42,33 @@ Everything below assumes AM has decided to go ahead.
 
 ## Do you need Neon?
 
+### Not for different content per site
+
+Worth separating, because it is the most common confusion: **different content
+on 75 pages does not require a database.** That is what a build does.
+
+It is already working. `data/country-seed.json` is committed to the repo, and
+`web/lib/content.ts` reads it. Today:
+
+| | |
+|---|---|
+| Country URLs rendering | 75 |
+| With chapters pre-filled from the current site | 37 pages, 52 chapters |
+| Rendering the "no chapter yet" state | 38 pages |
+| Databases involved | **none** |
+
+`/north-america/united-states/us` lists 18 chapters. `/oceania/australia/au`
+lists Sydney. `/europe/austria/at` says "We are just starting in Austria."
+Different content, different design states, no Neon.
+
+If AM were content for a developer to edit that JSON, you would never need a
+database at all.
+
+### You need it for *who edits*, not for *whether it differs*
+
 Vercel has no database of its own. Vercel Postgres *is* Neon underneath —
-Vercel resells it through their marketplace. So "Neon or not" is really "does
-this site need a database at all".
+Vercel resells it through their marketplace. So the question is not "does the
+content differ per site" — it does already — but "who changes it".
 
 Work through what the site actually has to store:
 
@@ -56,12 +82,30 @@ Work through what the site actually has to store:
 | Country intake submissions | **Yes** |
 | 68 editor accounts with per-country permissions | **Yes** |
 
-Three of those could be worked around. The editor accounts cannot. The moment
-you have 68 non-technical people in 48 languages who each need to change their
-own page and nobody else's, you need authentication, authorisation and
-persistent storage — which is a database.
+Every one of those could live in the repo — except the last two rows. Public
+form submissions have to be written somewhere at runtime, and 68 editor
+accounts need authentication and authorisation. The moment non-technical people
+in 48 languages each change their own page and nobody else's, you need a
+database.
 
-**So: yes. Neon, or an equivalent Postgres.**
+**So: yes, eventually. But not yet, and that is the useful part.**
+
+Right now **zero of the 68 countries are publishable** — every one is missing
+`contactEmail`, `leaderName`, `locale` and `owner`. There is nothing for 68
+editors to edit, because AM has not collected the intake fields yet
+(`content-pack/12-gaps.md`, items C3 and C4).
+
+So the sequence is:
+
+1. **Now** — build and launch on repo content. No Neon, no Payload, no cost.
+   Pilots go live on the data AM already has.
+2. **When intake data starts arriving** — add Neon and Payload, seed from
+   `data/country-seed.json`, hand each country its login.
+3. `web/lib/content.ts` is the seam. `getCountryContent()` swaps from JSON to a
+   Payload query and no page component changes.
+
+Deferring costs nothing and removes a dependency from the critical path. Adding
+it early buys an empty CMS.
 
 ### But the database is the easy part
 

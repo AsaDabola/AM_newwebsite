@@ -21,7 +21,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "São Paulo",
+          "country": "Brazil",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -46,7 +55,32 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Montreal",
+          "country": "Canada",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Toronto",
+          "country": "Canada",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Vancouver",
+          "country": "Canada",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -78,7 +112,24 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Bogotá",
+          "country": "Colombia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Caracas",
+          "country": "Venezuela",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -102,7 +153,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Paris",
+          "country": "France",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": {
@@ -128,7 +188,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Frankfurt",
+          "country": "Germany",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -153,7 +222,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Chennai",
+          "country": "India",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -177,7 +255,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Jakarta",
+          "country": "Indonesia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -227,7 +314,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Tokyo",
+          "country": "Japan",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": {
@@ -270,7 +366,32 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Nairobi",
+          "country": "Kenya",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Kampala",
+          "country": "Uganda",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Dar es Salaam",
+          "country": "Tanzania",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -294,7 +415,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Seoul",
+          "country": "South Korea",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": {
@@ -323,7 +453,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Mexico City",
+          "country": "Mexico",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -347,7 +486,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Lagos",
+          "country": "Nigeria",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -371,7 +519,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Sydney",
+          "country": "Australia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -447,7 +604,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Madrid",
+          "country": "Spain",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": {
@@ -497,7 +663,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "London",
+          "country": "United Kingdom",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": {
@@ -523,7 +698,152 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "New York",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Atlanta",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Boston",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Burlington",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Detroit",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Houston",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Los Angeles",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Nashville",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "New Haven",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Philadelphia",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Princeton",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Raleigh",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "San Diego",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "San Francisco",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Seattle",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "St. Louis",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Washington DC",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Wichita",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": {
@@ -600,7 +920,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Kinshasa",
+          "country": "Democratic Republic of the Congo",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -625,7 +954,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Addis Ababa",
+          "country": "Ethiopia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -746,7 +1084,24 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Lusaka",
+          "country": "Zambia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Ndola",
+          "country": "Zambia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -916,7 +1271,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Amsterdam",
+          "country": "Netherlands",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -940,7 +1304,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Warsaw",
+          "country": "Poland",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -1140,7 +1513,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Buenos Aires",
+          "country": "Argentina",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -1188,7 +1570,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Lima",
+          "country": "Peru",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -1237,7 +1628,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Cairo",
+          "country": "Egypt",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -1433,7 +1833,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Kuala Lumpur",
+          "country": "Malaysia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -1482,7 +1891,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Manila",
+          "country": "Philippines",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -1533,7 +1951,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Bangkok",
+          "country": "Thailand",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -1557,7 +1984,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Hanoi",
+          "country": "Vietnam",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": null
@@ -1581,7 +2017,16 @@
       "leaderName": null,
       "leaderRole": null,
       "locale": null,
-      "chapters": [],
+      "chapters": [
+        {
+          "city": "Ulaanbaatar",
+          "country": "Mongolia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
       "photos": [],
       "owner": null,
       "existingSites": {
