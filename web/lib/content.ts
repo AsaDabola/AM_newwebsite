@@ -17,6 +17,10 @@
 
 import seed from '../data/country-seed.json';
 import type { CountryRoute } from './routes';
+import type {
+  Country as PayloadCountry,
+  Chapter as PayloadChapter,
+} from '../payload-types';
 
 export interface Chapter {
   city: string;
@@ -55,32 +59,35 @@ const SEED_BY_ENTRY = new Map<number, CountryContent>(
 
 /* --------------------------------------------------------------- payload -- */
 
-/** Payload rows shape the same interface, so page components stay unchanged. */
-function fromPayload(doc: Record<string, unknown>, chapters: Record<string, unknown>[]): CountryContent {
+/**
+ * Payload rows shape the same interface, so page components stay unchanged.
+ * Typed against payload-types.ts, which `payload generate:types` produces from
+ * the collections — so a field renamed in a collection fails the typecheck
+ * here rather than rendering an empty page.
+ */
+function fromPayload(doc: PayloadCountry, chapters: PayloadChapter[]): CountryContent {
   return {
-    entryNo: doc.entryNo as number,
-    name: doc.name as string,
-    region: (doc.region as string) ?? null,
-    paths: Array.isArray(doc.paths)
-      ? (doc.paths as { path: string }[]).map((p) => p.path)
-      : [],
+    entryNo: doc.entryNo,
+    name: doc.name,
+    region: doc.region ?? null,
+    paths: (doc.paths ?? []).map((p) => p.path),
     languages: [],
-    status: (doc.status as 'draft' | 'published') ?? 'draft',
-    standfirst: (doc.standfirst as string) ?? null,
-    startedYear: (doc.startedYear as number) ?? null,
-    contactEmail: (doc.contactEmail as string) ?? null,
-    leaderName: (doc.leaderName as string) ?? null,
-    leaderRole: (doc.leaderRole as string) ?? null,
-    locale: (doc.locale as string) ?? null,
+    status: doc.status ?? 'draft',
+    standfirst: doc.standfirst ?? null,
+    startedYear: doc.startedYear ?? null,
+    contactEmail: doc.contactEmail ?? null,
+    leaderName: doc.leaderName ?? null,
+    leaderRole: doc.leaderRole ?? null,
+    locale: doc.locale ?? null,
     chapters: chapters.map((c) => ({
-      city: c.city as string,
-      university: (c.university as string) ?? null,
-      meetingDay: (c.meetingDay as string) ?? null,
-      meetingTime: (c.meetingTime as string) ?? null,
-      email: (c.email as string) ?? null,
+      city: c.city,
+      university: c.university ?? null,
+      meetingDay: c.meetingDay ?? null,
+      meetingTime: c.meetingTime ?? null,
+      email: c.email ?? null,
     })),
     photos: [],
-    owner: (doc.owner as string) ?? null,
+    owner: doc.owner ?? null,
   };
 }
 
@@ -98,7 +105,7 @@ async function fetchFromPayload(entryNo: number): Promise<CountryContent | undef
     depth: 0,
   });
 
-  const doc = docs[0] as Record<string, unknown> | undefined;
+  const doc = docs[0];
   if (!doc) return undefined;
 
   const { docs: chapters } = await payload.find({
@@ -109,7 +116,7 @@ async function fetchFromPayload(entryNo: number): Promise<CountryContent | undef
     sort: 'city',
   });
 
-  return fromPayload(doc, chapters as Record<string, unknown>[]);
+  return fromPayload(doc, chapters);
 }
 
 /* -------------------------------------------------------------------- api -- */

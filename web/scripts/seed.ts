@@ -27,7 +27,7 @@ interface SeedChapter {
 interface SeedRow {
   entryNo: number;
   name: string;
-  tier: string;
+  tier: 'G20' | 'M40' | 'Additional';
   region: string | null;
   paths: string[];
   covers: string[] | null;
@@ -72,7 +72,7 @@ async function main() {
       depth: 0,
     });
 
-    let countryId: string | number;
+    let countryId: number;
 
     if (existing.docs.length > 0) {
       // Identity only. Local fields belong to whoever wrote them.
@@ -81,6 +81,7 @@ async function main() {
         id: existing.docs[0].id,
         data: identity,
         overrideAccess: true,
+        context: { disableRevalidate: true },
       });
       countryId = doc.id;
       updated++;
@@ -89,6 +90,7 @@ async function main() {
         collection: 'countries',
         data: { ...identity, status: 'draft' },
         overrideAccess: true,
+        context: { disableRevalidate: true },
       });
       countryId = doc.id;
       created++;
@@ -123,6 +125,7 @@ async function main() {
           status: 'draft',
         },
         overrideAccess: true,
+        context: { disableRevalidate: true },
       });
       chaptersCreated++;
     }

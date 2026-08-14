@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "node ../tools/content/build-routes.js && next build",
+    "build": "node ../tools/content/build-routes.js && payload generate:importmap && next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "generate:types": "payload generate:types",
