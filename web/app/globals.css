@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Design tokens — Figma-sourced only.
+
+   The old static site's design system (assets/css/main.css) is deliberately
+   NOT ported here. Per direction: this site's styling comes from the Figma
+   file (figma.com/design/5AhK3Mov8IsLeBnLSJ3o9f), not from the legacy site.
+
+   Right now this file holds almost nothing, because almost nothing has been
+   confirmed. Figma access has not been reachable in this conversation — every
+   check so far (ListConnectors, ToolSearch) reports the connector off for
+   this chat despite being connected at the account level. The one real value
+   below is the one thing actually pulled from the file via get_variable_defs
+   before access dropped:
+
+     Brand/Primary Blue = #007AFF
+
+   Everything else — the rest of the palette, type scale, spacing scale,
+   fonts, radii — is undefined until a real get_design_context /
+   get_variable_defs pull can happen. Do not fill these in from memory, the
+   old site, or guesswork. Add a token here only once it has a real Figma
+   source, and name it after what Figma calls it where possible.
+   ========================================================================== */
+
+:root {
+  --figma-primary-blue: #007aff; /* get_variable_defs, node 1:3, "Brand/Primary Blue" */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
