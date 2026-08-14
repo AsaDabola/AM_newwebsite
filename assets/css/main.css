@@ -19,7 +19,7 @@
      14  Pillars (what we do)
      15  Chapter finder
      16  Legacy band
-     17  Give CTA + newsletter
+     17  Give CTA + field notes
      18  Footer
      19  Interior pages
      20  Motion, accessibility, print
@@ -1880,7 +1880,7 @@ a.card--dark:hover {
   }
 }
 
-/* -------------------------------------------------- 17 give + newsletter -- */
+/* ------------------------------------------------- 17 give + field notes -- */
 
 .cta-band {
   position: relative;
@@ -1922,13 +1922,35 @@ a.card--dark:hover {
   }
 }
 
-.newsletter {
-  background: var(--surface-space);
+.field-notes {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   border-top: 1px solid var(--line-dark-soft);
   color: var(--text-on-dark);
 }
 
-.newsletter__inner {
+.field-notes__media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.field-notes__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.field-notes::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(100deg, rgba(4, 9, 30, 0.88) 32%, rgba(6, 13, 36, 0.5) 78%);
+}
+
+.field-notes__inner {
   display: grid;
   gap: var(--sp-5);
   align-items: center;
@@ -1936,26 +1958,16 @@ a.card--dark:hover {
   padding-block: var(--sp-7);
 }
 
-.newsletter h2 {
+.field-notes h2 {
   font-size: var(--fs-h3);
   margin: 0 0 var(--sp-2);
+  color: #fff;
 }
 
-.newsletter p {
+.field-notes p {
   font-size: 0.9375rem;
   color: var(--text-on-dark-muted);
   margin: 0;
-}
-
-.newsletter__form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-2);
-}
-
-.newsletter__form .field input {
-  padding-left: 1.25rem;
-  min-width: 14rem;
 }
 
 .form-note {
@@ -1972,8 +1984,8 @@ a.card--dark:hover {
 }
 
 @media (min-width: 900px) {
-  .newsletter__inner {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  .field-notes__inner {
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: var(--sp-8);
   }
 }
@@ -2133,6 +2145,28 @@ a.card--dark:hover {
     ),
     radial-gradient(70% 90% at 0% 100%, rgba(20, 73, 198, 0.1) 0%, transparent 60%),
     linear-gradient(180deg, #05070d 0%, #080e1b 100%);
+}
+
+.page-hero--photo .page-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.page-hero--photo .page-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-hero--photo::before {
+  background: radial-gradient(
+      80% 120% at 80% 0%,
+      rgba(77, 141, 246, 0.16) 0%,
+      transparent 58%
+    ),
+    radial-gradient(70% 90% at 0% 100%, rgba(20, 73, 198, 0.1) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(5, 7, 13, 0.3) 43%, rgba(8, 14, 27, 0.72) 100%);
 }
 
 .page-hero h1 {
@@ -2642,7 +2676,7 @@ a.card--dark:hover {
   .hero__stars,
   .globe,
   .cta-band,
-  .newsletter,
+  .field-notes,
   .footer__cols {
     display: none !important;
   }

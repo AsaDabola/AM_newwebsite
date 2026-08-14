@@ -8,6 +8,9 @@ import '../globals.css';
  * The admin has its own root layout in app/(payload)/layout.tsx. Two route
  * groups each carrying a layout, with no app/layout.tsx, is the Payload 3
  * pattern — it keeps the admin's styling out of the public pages entirely.
+ *
+ * globals.css is Figma-sourced only — see the note at the top of that file.
+ * It deliberately does not reuse the legacy static site's design system.
  */
 
 export const metadata: Metadata = {

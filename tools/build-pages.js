@@ -138,34 +138,30 @@ function ctaBand(url) {
   </div>
 </section>
 
-<section class="newsletter">
-  <div class="container newsletter__inner">
-    <div>
-      <h2>Field notes from the campuses</h2>
+<section class="field-notes">
+  <div class="field-notes__media"><img src="${url('/assets/img/feature-campuses.svg')}" alt="" loading="lazy" width="1600" height="420"></div>
+  <div class="container field-notes__inner">
+    <div data-reveal>
+      <h2>Field Notes from the Campuses</h2>
       <p>A short monthly letter: what students are seeing, where AM is going next, and how to pray.</p>
     </div>
-    <form class="newsletter__form" data-placeholder-form>
-      <div class="field">
-        <label class="visually-hidden" for="nl-email">Email address</label>
-        <input id="nl-email" type="email" name="email" placeholder="you@example.com" required>
-      </div>
-      <button class="btn" type="submit">Subscribe</button>
-      <p class="form-status" role="status"></p>
-      <p class="form-note">We only send the monthly letter. Unsubscribe any time.</p>
-    </form>
+    <div class="hero__actions" data-reveal style="margin-bottom:0">
+      <a class="btn btn--lg" href="${url('/academy/')}">AM Academy ${ICONS.arrow}</a>
+    </div>
   </div>
 </section>`;
 }
 
-/** Standard interior page top. */
-function pageHero({ title, lede, crumbs, url }) {
+/** Standard interior page top. Pass `photo` for a full-bleed image background. */
+function pageHero({ title, lede, crumbs, url, photo }) {
   const trail = (crumbs || [])
     .map(([label, href]) =>
       href ? `<li><a href="${url(href)}">${label}</a></li>` : `<li>${label}</li>`
     )
     .join('\n        ');
   return `
-<section class="page-hero">
+<section class="page-hero${photo ? ' page-hero--photo' : ''}">
+  ${photo ? `<div class="page-hero__media"><img src="${url(photo)}" alt="" loading="lazy" width="1920" height="760"></div>` : ''}
   <div class="container">
     <ol class="breadcrumb">
         ${trail}
@@ -610,18 +606,19 @@ ${pageHero({
   title: 'Who we are',
   lede: 'An interdenominational ministry committed to spreading the gospel to the ends of the earth, testifying to the eternal love of the Lord.',
   crumbs: [['Home', '/'], ['About']],
+  photo: '/assets/img/hero-about.svg',
   url
 })}
 ${subnav(ABOUT_SUBNAV, '/about/', url)}
 <section class="section">
   <div class="container">
     <div class="prose" data-reveal>
-      <p class="lede">The name <em>apostolos</em> is the Greek word for apostle. It means &ldquo;one who is sent on a mission.&rdquo; That is what we are, and what we are for.</p>
-      <p>What began as a small group of passionate young students in Los Angeles, California &mdash; students with an eagerness to spread the gospel and to make Jesus known &mdash; has become a global organisation. Apostolos Missions International is a worldwide community of believers dedicated to the spreading of the Gospel across university campuses.</p>
-      <blockquote>Our aim is to foster a Christ-centred network of young Christians for the mobilisation of campus mission.</blockquote>
-      <p>AM staff, volunteers and members use their talents and gifts to participate in God&rsquo;s mission of teaching the Gospel and making disciples among the youth of the world. Small and large group Bible studies, leadership training, online education, internships and short-term mission trips all provide opportunities for young people to take part.</p>
-      <h2>What holds it together</h2>
-      <p>AM is interdenominational by conviction. Students come from many churches and traditions, and are sent back into them better equipped. What unites the fellowship is the simplest possible centre: to preach Jesus and Him crucified.</p>
+      <p class="lede">Apostolos Missions International (AM) is an interdenominational ministry committed to spreading the gospel to the ends of the earth, testifying to the eternal love of the Lord.</p>
+      <p>The name <em>apostolos</em> (&#7936;&pi;&#8057;&sigma;&tau;&omicron;&lambda;&omicron;&sigmaf;) is the Greek word for apostle. It means &ldquo;one who is sent on a mission&rdquo; or &ldquo;messenger.&rdquo; The title &ldquo;apostle&rdquo; often comes out in the New Testament to represent the Twelve disciples appointed by Jesus (Matthew 10:2, Mark 3:14, Luke 6:13, Acts 2:42). Paul, a former persecutor of Christianity turning to a great herald of the gospel, introduced himself as an &ldquo;apostle&rdquo; (Romans 1:1, 1 Corinthians 1:1, 2 Corinthians 1:1, Galatians 1:1, Colossians 1:1, 1 Timothy 1:1, 2 Timothy 1:1, Titus).</p>
+      <p>Apostles are those who are sent by the Lord to fulfill the mission of &ldquo;preaching Jesus Christ and making God known&rdquo; to the whole creation. Biblical foundation of apostleship is found in many words of the Lord who selected first apostles and sent them out like the ambassadors dispatched to represent different nations. Apostles understood that their lives were not just their own, but they lived to reveal the glory of Christ in this fallen world.</p>
+      <blockquote>John 20:21 says, &ldquo;Again Jesus said, &lsquo;Peace be with you! As the Father has sent me, I am sending you.&rsquo;&rdquo; (NIV)</blockquote>
+      <p>AM wishes to follow the tradition of the apostles who lived as people on a mission to proclaim the Word of God. Each of us also receive this calling from God to be sent out into the world as His hands and feet. We wish to dedicate our lives to follow the footsteps of Jesus and proclaim the Gospel until the ends of the earth.</p>
+      <p>Just as our lives have been touched and changed by the Lord, we wish to reveal the love of the Lord that was shown to us, becoming a beacon for all of His lost children and our fellow brothers and sisters.</p>
       <p><a href="${url('/about/beliefs/')}">Read our statement of faith</a> or <a href="${url('/about/history/')}">trace the history</a>.</p>
     </div>
   </div>
@@ -1584,7 +1581,7 @@ ${pageHero({
       <p class="lede">Alternating bands: dark, light, dark. Each band does one job and hides itself when it has no content, so a half-filled site still looks deliberate.</p>
     </div>
     <div class="prose" data-reveal>
-      <p style="color:var(--text-on-dark-muted)">Bands available: hero with globe, quick links, programme, card row, mission, media, events, chapter finder, legacy, give, newsletter.</p>
+      <p style="color:var(--text-on-dark-muted)">Bands available: hero with globe, quick links, programme, card row, mission, media, events, chapter finder, legacy, give, field notes.</p>
     </div>
   </div>
 </section>
