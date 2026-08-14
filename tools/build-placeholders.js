@@ -150,7 +150,11 @@ const files = [
   ['person-4.svg', portrait, { w: 600, h: 600, seed: 304, ramp: 2 }],
 
   // Ralph D. Winter portrait slot - 4:5
-  ['portrait-winter.svg', portrait, { w: 640, h: 800, seed: 401, ramp: 3 }]
+  ['portrait-winter.svg', portrait, { w: 640, h: 800, seed: 401, ramp: 3 }],
+
+  // Full-bleed photo bands
+  ['hero-about.svg', artwork, { w: 1920, h: 760, seed: 501, ramp: 2 }],
+  ['feature-campuses.svg', artwork, { w: 1600, h: 420, seed: 502, ramp: 5 }]
 ];
 
 for (const [name, fn, opts] of files) {
