@@ -23,6 +23,17 @@ It exits non-zero on a route problem — today it reports one, the
 standalone Rwanda entry. `npm run build` runs it first, so a route problem
 fails the build rather than shipping a broken URL.
 
+## Environment
+
+| Variable | Without it |
+|---|---|
+| `POSTGRES_URL` | Builds from `data/country-seed.json`. No CMS |
+| `PAYLOAD_SECRET` | Required by Payload; any long random string |
+| `BLOB_READ_WRITE_TOKEN` | Uploads go to local disk. **Must be set in production** — see `docs/media-storage.md` |
+| `NEXT_PUBLIC_SERVER_URL` | Admin and CORS use it; defaults to localhost |
+
+See `.env.example`. The app builds and deploys with none of them set.
+
 ## Local
 
 ```

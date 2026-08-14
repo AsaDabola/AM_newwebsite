@@ -8,6 +8,14 @@ const nextConfig = {
   async redirects() {
     return [{ source: '/', destination: '/intl', permanent: true }];
   },
+
+  images: {
+    // Uploads are served from Vercel Blob. The subdomain is per-store, so the
+    // wildcard covers whichever store the project is connected to.
+    remotePatterns: [
+      { protocol: 'https', hostname: '*.public.blob.vercel-storage.com' },
+    ],
+  },
 };
 
 // withPayload wires the admin bundle into the Next build. It is a no-op for
