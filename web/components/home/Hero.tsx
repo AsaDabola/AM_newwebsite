@@ -5,11 +5,14 @@ import styles from './Hero.module.css';
  * The homepage hero, from the Figma file's Main_2 frame
  * (node 230:2831, https://figma.com/design/5AhK3Mov8IsLeBnLSJ3o9f).
  *
+ * Figma-sourced only — the old static site's design and copy are explicitly
+ * not used as a fallback here, per direction. Where something below isn't
+ * confirmed from Figma, it is marked as such rather than filled in from the
+ * legacy site or invented.
+ *
  * PROVISIONAL — built without live get_design_context access (the Figma
- * connector was toggled on for the account but never became reachable inside
- * this conversation; six checks across two methods all came back the tools
- * unavailable). This is a best-effort implementation, not a verified pull,
- * and needs a real design-context pass once access works. Specifically:
+ * connector is connected at the account level but has not become reachable
+ * inside this conversation across repeated checks). Specifically:
  *
  *   CONFIRMED, visible directly in the Main_2 thumbnail screenshot:
  *     - Headline: "Future Begins from Where We Are."
@@ -23,12 +26,12 @@ import styles from './Hero.module.css';
  *     - Two buttons: "Join our Bible Study" and "Who we are"
  *     - A horizontal divider above the eyebrow
  *
- *   NOT AVAILABLE AT ALL, needs a real pull:
- *     - The hero photograph itself (a placeholder pattern stands in below —
- *       see the design-to-code skill's rule against faking an asset; this
- *       does not pretend to be the real image)
- *     - Exact colors, spacing and type sizes — this uses the site's existing
- *       tokens in app/globals.css, not values read from the Figma file
+ *   NOT AVAILABLE AT ALL, needs a real pull — and NOT backfilled from the
+ *   old site:
+ *     - The hero photograph itself (a labelled placeholder stands in below;
+ *       see the design-to-code skill's rule against faking an asset)
+ *     - Colors, spacing, type sizes and fonts — Hero.module.css uses plain
+ *       values or browser defaults, not the old site's token system
  *     - Button hrefs — guessed at /connect and /about pending real ones
  *
  * Re-implement this component for real the moment Figma access is live:
