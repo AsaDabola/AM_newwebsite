@@ -1,0 +1,136 @@
+/*
+  Provisional styling — see the header comment in Hero.tsx for exactly what
+  is confirmed against the Figma file versus carried over from its sibling
+  frame while live access was unavailable.
+*/
+
+.hero {
+  position: relative;
+  min-height: 640px;
+  display: flex;
+  align-items: flex-end;
+  color: var(--text-on-dark);
+  overflow: hidden;
+}
+
+.imagePlaceholder {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      var(--surface-navy),
+      var(--surface-navy) 24px,
+      var(--surface-panel) 24px,
+      var(--surface-panel) 48px
+    );
+}
+
+.imagePlaceholderLabel {
+  position: absolute;
+  top: var(--sp-4);
+  right: var(--sp-4);
+  background: rgba(5, 7, 13, 0.7);
+  color: var(--text-on-dark);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--text-on-dark-faint);
+}
+
+.gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(5, 7, 13, 0.92) 0%,
+    rgba(5, 7, 13, 0.55) 45%,
+    rgba(5, 7, 13, 0.1) 100%
+  );
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--sp-9) var(--gutter) var(--sp-8);
+}
+
+.eyebrowRow {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+}
+
+.divider {
+  width: 28px;
+  height: 1px;
+  background: var(--text-on-dark-faint);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.02em;
+  color: var(--text-on-dark-muted);
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h1);
+  line-height: 1.03;
+  margin: 0 0 var(--sp-6);
+  max-width: 14ch;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--fs-base);
+  padding: var(--sp-4) var(--sp-6);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background var(--ease), color var(--ease);
+}
+
+.buttonPrimary {
+  background: var(--brand-blue);
+  color: var(--text-on-dark);
+}
+
+.buttonPrimary:hover {
+  background: var(--brand-blue-deep);
+}
+
+.buttonSecondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-on-dark);
+  border: 1px solid var(--line-dark);
+}
+
+.buttonSecondary:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 520px;
+  }
+  .headline {
+    max-width: 100%;
+  }
+}

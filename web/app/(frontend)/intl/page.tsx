@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { REGIONS, uniquePaths } from '@/lib/routes';
+import { Hero } from '@/components/home/Hero';
 
 /**
  * The international HQ site at /intl.
  *
- * `/` redirects here — see web/next.config.mjs. Copy is from
- * content-pack/01-homepage.md; the design lands with the Figma components.
+ * `/` redirects here — see web/next.config.mjs. The hero below is the first
+ * Figma-sourced component (see Hero.tsx for what is confirmed vs
+ * provisional); everything under it is still the placeholder copy from
+ * content-pack/01-homepage.md pending the rest of the Main_2 sections.
  */
 
 export const metadata: Metadata = {
@@ -21,14 +24,7 @@ export default function InternationalHome() {
 
   return (
     <main>
-      <header>
-        <p>APOSTOLOS MISSIONS INTERNATIONAL</p>
-        <h1>Sent to the ends of the earth</h1>
-        <p>
-          An interdenominational campus ministry preaching the Gospel, making
-          disciples, and sending them out.
-        </p>
-      </header>
+      <Hero />
 
       <section>
         <h2>A worldwide community</h2>
