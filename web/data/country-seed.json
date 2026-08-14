@@ -1,0 +1,2159 @@
+{
+  "generated": "tools/content/build-country-seed.js",
+  "collection": "countries",
+  "rows": [
+    {
+      "entryNo": 1,
+      "name": "Brazil",
+      "tier": "G20",
+      "region": "South America",
+      "paths": [
+        "/south-america/brazil/br"
+      ],
+      "covers": null,
+      "languages": [
+        "Portuguese"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "São Paulo",
+          "country": "Brazil",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 2,
+      "name": "Canada",
+      "tier": "G20",
+      "region": "North America",
+      "paths": [
+        "/north-america/canada/ca"
+      ],
+      "covers": null,
+      "languages": [
+        "English",
+        "French"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Montreal",
+          "country": "Canada",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Toronto",
+          "country": "Canada",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Vancouver",
+          "country": "Canada",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 3,
+      "name": "Colombia",
+      "tier": "G20",
+      "region": "South America",
+      "paths": [
+        "/south-america/colombia/co",
+        "/south-america/venezuela/ve",
+        "/south-america/ecuador/ec",
+        "/south-america/panama/pa"
+      ],
+      "covers": [
+        "Colombia",
+        "Venezuela",
+        "Ecuador",
+        "Panama"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Bogotá",
+          "country": "Colombia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Caracas",
+          "country": "Venezuela",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 4,
+      "name": "France",
+      "tier": "G20",
+      "region": "Europe",
+      "paths": [
+        "/europe/france/fr"
+      ],
+      "covers": null,
+      "languages": [
+        "French"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Paris",
+          "country": "France",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": {
+        "YEF": "https://yefi.org/fr/"
+      }
+    },
+    {
+      "entryNo": 5,
+      "name": "Germany",
+      "tier": "G20",
+      "region": "Europe",
+      "paths": [
+        "/europe/germany/de"
+      ],
+      "covers": null,
+      "languages": [
+        "German"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Frankfurt",
+          "country": "Germany",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 6,
+      "name": "India",
+      "tier": "G20",
+      "region": "South Asia",
+      "paths": [
+        "/south-asia/india/in"
+      ],
+      "covers": null,
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Chennai",
+          "country": "India",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 7,
+      "name": "Indonesia",
+      "tier": "G20",
+      "region": "Southeast Asia",
+      "paths": [
+        "/southeast-asia/indonesia/id"
+      ],
+      "covers": null,
+      "languages": [
+        "Indonesian"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Jakarta",
+          "country": "Indonesia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 8,
+      "name": "Italy",
+      "tier": "G20",
+      "region": "Europe",
+      "paths": [
+        "/europe/italy/it"
+      ],
+      "covers": null,
+      "languages": [
+        "Italian"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": {
+        "YEF": "yefi.org/it/"
+      }
+    },
+    {
+      "entryNo": 9,
+      "name": "Japan",
+      "tier": "G20",
+      "region": "Asia-Pacific",
+      "paths": [
+        "/asia-pacific/japan/jp"
+      ],
+      "covers": null,
+      "languages": [
+        "Japanese"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Tokyo",
+          "country": "Japan",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": {
+        "AM": "https://amjapan.org/",
+        "YEF": "https://yefi.org/jp/"
+      }
+    },
+    {
+      "entryNo": 10,
+      "name": "East Federal Africa",
+      "tier": "G20",
+      "region": "Africa",
+      "paths": [
+        "/africa/kenya/ke",
+        "/africa/tanzania/tz",
+        "/africa/uganda/ug",
+        "/africa/rwanda/rw",
+        "/africa/burundi/bi",
+        "/africa/south-sudan/ss"
+      ],
+      "covers": [
+        "Kenya",
+        "Tanzania",
+        "Uganda",
+        "Rwanda",
+        "Burundi",
+        "South Sudan"
+      ],
+      "languages": [
+        "English",
+        "Swahili",
+        "French",
+        "Kinyarwanda",
+        "Kirundi"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Nairobi",
+          "country": "Kenya",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Kampala",
+          "country": "Uganda",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Dar es Salaam",
+          "country": "Tanzania",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 11,
+      "name": "South Korea",
+      "tier": "G20",
+      "region": "Asia-Pacific",
+      "paths": [
+        "/asia-pacific/south-korea/kr"
+      ],
+      "covers": null,
+      "languages": [
+        "Korean"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Seoul",
+          "country": "South Korea",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": {
+        "AM": "https://amkorea.org/",
+        "YEF": "https://yefk.org/",
+        "JUBILEE": "https://kr.jubileeworld.org/",
+        "CREATIO": "creatio.or.kr"
+      }
+    },
+    {
+      "entryNo": 12,
+      "name": "Mexico",
+      "tier": "G20",
+      "region": "North America",
+      "paths": [
+        "/north-america/mexico/mx"
+      ],
+      "covers": null,
+      "languages": [
+        "Spanish"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Mexico City",
+          "country": "Mexico",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 13,
+      "name": "Nigeria",
+      "tier": "G20",
+      "region": "Africa",
+      "paths": [
+        "/africa/nigeria/ng"
+      ],
+      "covers": null,
+      "languages": [
+        "English"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Lagos",
+          "country": "Nigeria",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 14,
+      "name": "Australia",
+      "tier": "G20",
+      "region": "Oceania",
+      "paths": [
+        "/oceania/australia/au"
+      ],
+      "covers": null,
+      "languages": [
+        "English"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Sydney",
+          "country": "Australia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 15,
+      "name": "Russia",
+      "tier": "G20",
+      "region": "Commonwealth of Independent States",
+      "paths": [
+        "/commonwealth-of-independent-states/russia/ru"
+      ],
+      "covers": null,
+      "languages": [
+        "Russian"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 16,
+      "name": "South Africa",
+      "tier": "G20",
+      "region": "Africa",
+      "paths": [
+        "/africa/south-africa/za"
+      ],
+      "covers": null,
+      "languages": [
+        "English",
+        "Afrikaans",
+        "Zulu",
+        "Xhosa",
+        "and others"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 17,
+      "name": "Spain",
+      "tier": "G20",
+      "region": "Europe",
+      "paths": [
+        "/europe/spain/es"
+      ],
+      "covers": null,
+      "languages": [
+        "Spanish"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Madrid",
+          "country": "Spain",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": {
+        "YEF": "yefi.org/es"
+      }
+    },
+    {
+      "entryNo": 18,
+      "name": "Turkey",
+      "tier": "G20",
+      "region": "Middle East and North Africa",
+      "paths": [
+        "/middle-east-and-north-africa/turkey/tr"
+      ],
+      "covers": null,
+      "languages": [
+        "Turkish"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 19,
+      "name": "United Kingdom",
+      "tier": "G20",
+      "region": "Europe",
+      "paths": [
+        "/europe/united-kingdom/gb"
+      ],
+      "covers": null,
+      "languages": [
+        "English"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "London",
+          "country": "United Kingdom",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": {
+        "YEF": "https://yefi.org/uk/"
+      }
+    },
+    {
+      "entryNo": 20,
+      "name": "United States",
+      "tier": "G20",
+      "region": "North America",
+      "paths": [
+        "/north-america/united-states/us"
+      ],
+      "covers": null,
+      "languages": [
+        "English"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "New York",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Atlanta",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Boston",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Burlington",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Detroit",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Houston",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Los Angeles",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Nashville",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "New Haven",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Philadelphia",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Princeton",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Raleigh",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "San Diego",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "San Francisco",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Seattle",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "St. Louis",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Washington DC",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Wichita",
+          "country": "United States",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": {
+        "YEF": "https://yefi.org/usa/"
+      }
+    },
+    {
+      "entryNo": 21,
+      "name": "Angola",
+      "tier": "M40",
+      "region": "Africa",
+      "paths": [
+        "/africa/angola/ao"
+      ],
+      "covers": null,
+      "languages": [
+        "Portuguese"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": {
+        "YEF": "yefi.org/ao"
+      }
+    },
+    {
+      "entryNo": 22,
+      "name": "Cameroon",
+      "tier": "M40",
+      "region": "Africa",
+      "paths": [
+        "/africa/cameroon/cm"
+      ],
+      "covers": null,
+      "languages": [
+        "French",
+        "English"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 23,
+      "name": "Democratic Republic of the Congo",
+      "tier": "M40",
+      "region": "Africa",
+      "paths": [
+        "/africa/democratic-republic-of-the-congo/cd"
+      ],
+      "covers": null,
+      "languages": [
+        "French"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Kinshasa",
+          "country": "Democratic Republic of the Congo",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 24,
+      "name": "Ethiopia",
+      "tier": "M40",
+      "region": "Africa",
+      "paths": [
+        "/africa/ethiopia/et"
+      ],
+      "covers": null,
+      "languages": [
+        "Amharic",
+        "English"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Addis Ababa",
+          "country": "Ethiopia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 25,
+      "name": "Ghana",
+      "tier": "M40",
+      "region": "Africa",
+      "paths": [
+        "/africa/ghana/gh"
+      ],
+      "covers": null,
+      "languages": [
+        "English"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 26,
+      "name": "Côte d'Ivoire",
+      "tier": "M40",
+      "region": "Africa",
+      "paths": [
+        "/africa/cote-divoire/ci"
+      ],
+      "covers": null,
+      "languages": [
+        "French"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 27,
+      "name": "Madagascar",
+      "tier": "M40",
+      "region": "Africa",
+      "paths": [
+        "/africa/madagascar/mg"
+      ],
+      "covers": null,
+      "languages": [
+        "Malagasy",
+        "French"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 28,
+      "name": "Mozambique",
+      "tier": "M40",
+      "region": "Africa",
+      "paths": [
+        "/africa/mozambique/mz"
+      ],
+      "covers": null,
+      "languages": [
+        "Portuguese"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 29,
+      "name": "Zambia",
+      "tier": "M40",
+      "region": "Africa",
+      "paths": [
+        "/africa/zambia/zm"
+      ],
+      "covers": null,
+      "languages": [
+        "English"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Lusaka",
+          "country": "Zambia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        },
+        {
+          "city": "Ndola",
+          "country": "Zambia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 30,
+      "name": "Austria",
+      "tier": "M40",
+      "region": "Europe",
+      "paths": [
+        "/europe/austria/at"
+      ],
+      "covers": null,
+      "languages": [
+        "German"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 31,
+      "name": "Belgium",
+      "tier": "M40",
+      "region": "Europe",
+      "paths": [
+        "/europe/belgium/be"
+      ],
+      "covers": null,
+      "languages": [
+        "Dutch",
+        "French",
+        "German"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 32,
+      "name": "Czechia",
+      "tier": "M40",
+      "region": "Europe",
+      "paths": [
+        "/europe/czechia/cz"
+      ],
+      "covers": null,
+      "languages": [
+        "Czech"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 33,
+      "name": "Slovakia",
+      "tier": "M40",
+      "region": "Europe",
+      "paths": [
+        "/europe/slovakia/sk"
+      ],
+      "covers": null,
+      "languages": [
+        "Slovak"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 34,
+      "name": "Greece",
+      "tier": "M40",
+      "region": "Europe",
+      "paths": [
+        "/europe/greece/gr"
+      ],
+      "covers": null,
+      "languages": [
+        "Greek"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 35,
+      "name": "Hungary",
+      "tier": "M40",
+      "region": "Europe",
+      "paths": [
+        "/europe/hungary/hu"
+      ],
+      "covers": null,
+      "languages": [
+        "Hungarian"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 36,
+      "name": "Netherlands",
+      "tier": "M40",
+      "region": "Europe",
+      "paths": [
+        "/europe/netherlands/nl"
+      ],
+      "covers": null,
+      "languages": [
+        "Dutch"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Amsterdam",
+          "country": "Netherlands",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 37,
+      "name": "Poland",
+      "tier": "M40",
+      "region": "Europe",
+      "paths": [
+        "/europe/poland/pl"
+      ],
+      "covers": null,
+      "languages": [
+        "Polish"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Warsaw",
+          "country": "Poland",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 38,
+      "name": "Portugal",
+      "tier": "M40",
+      "region": "Europe",
+      "paths": [
+        "/europe/portugal/pt"
+      ],
+      "covers": null,
+      "languages": [
+        "Portuguese"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 39,
+      "name": "Romania",
+      "tier": "M40",
+      "region": "Europe",
+      "paths": [
+        "/europe/romania/ro"
+      ],
+      "covers": null,
+      "languages": [
+        "Romanian"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": {
+        "YEF": "yefi.org/ro/"
+      }
+    },
+    {
+      "entryNo": 40,
+      "name": "Sweden",
+      "tier": "M40",
+      "region": "Europe",
+      "paths": [
+        "/europe/sweden/se"
+      ],
+      "covers": null,
+      "languages": [
+        "Swedish"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": {
+        "YEF": "yefi.org/se/"
+      }
+    },
+    {
+      "entryNo": 41,
+      "name": "Switzerland",
+      "tier": "M40",
+      "region": "Europe",
+      "paths": [
+        "/europe/switzerland/ch"
+      ],
+      "covers": null,
+      "languages": [
+        "German",
+        "French",
+        "Italian",
+        "Romansh"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 42,
+      "name": "Ukraine",
+      "tier": "M40",
+      "region": "Europe",
+      "paths": [
+        "/europe/ukraine/ua"
+      ],
+      "covers": null,
+      "languages": [
+        "Ukrainian"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 43,
+      "name": "Dominican Republic",
+      "tier": "M40",
+      "region": "Central America and the Caribbean",
+      "paths": [
+        "/central-america-and-the-caribbean/dominican-republic/do"
+      ],
+      "covers": null,
+      "languages": [
+        "Spanish"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 44,
+      "name": "Haiti",
+      "tier": "M40",
+      "region": "Central America and the Caribbean",
+      "paths": [
+        "/central-america-and-the-caribbean/haiti/ht"
+      ],
+      "covers": null,
+      "languages": [
+        "French",
+        "Haitian Creole"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 45,
+      "name": "Argentina",
+      "tier": "M40",
+      "region": "South America",
+      "paths": [
+        "/south-america/argentina/ar"
+      ],
+      "covers": null,
+      "languages": [
+        "Spanish"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Buenos Aires",
+          "country": "Argentina",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 46,
+      "name": "Chile",
+      "tier": "M40",
+      "region": "South America",
+      "paths": [
+        "/south-america/chile/cl"
+      ],
+      "covers": null,
+      "languages": [
+        "Spanish"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 47,
+      "name": "Peru",
+      "tier": "M40",
+      "region": "South America",
+      "paths": [
+        "/south-america/peru/pe"
+      ],
+      "covers": null,
+      "languages": [
+        "Spanish"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Lima",
+          "country": "Peru",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 48,
+      "name": "Kazakhstan",
+      "tier": "M40",
+      "region": "Commonwealth of Independent States",
+      "paths": [
+        "/commonwealth-of-independent-states/kazakhstan/kz"
+      ],
+      "covers": null,
+      "languages": [
+        "Kazakh",
+        "Russian"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 49,
+      "name": "Egypt",
+      "tier": "M40",
+      "region": "Middle East and North Africa",
+      "paths": [
+        "/middle-east-and-north-africa/egypt/eg"
+      ],
+      "covers": null,
+      "languages": [
+        "Arabic"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Cairo",
+          "country": "Egypt",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 50,
+      "name": "Israel",
+      "tier": "M40",
+      "region": "Middle East and North Africa",
+      "paths": [
+        "/middle-east-and-north-africa/israel/il"
+      ],
+      "covers": null,
+      "languages": [
+        "Hebrew",
+        "Arabic"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 51,
+      "name": "United Arab Emirates",
+      "tier": "M40",
+      "region": "Middle East and North Africa",
+      "paths": [
+        "/middle-east-and-north-africa/united-arab-emirates/ae"
+      ],
+      "covers": null,
+      "languages": [
+        "Arabic"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 52,
+      "name": "New Zealand",
+      "tier": "M40",
+      "region": "Oceania",
+      "paths": [
+        "/oceania/new-zealand/nz"
+      ],
+      "covers": null,
+      "languages": [
+        "English"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 53,
+      "name": "Fiji",
+      "tier": "M40",
+      "region": "Oceania",
+      "paths": [
+        "/oceania/fiji/fj"
+      ],
+      "covers": null,
+      "languages": [
+        "English",
+        "Fijian",
+        "Fiji Hindi"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 54,
+      "name": "Bangladesh",
+      "tier": "M40",
+      "region": "South Asia",
+      "paths": [
+        "/south-asia/bangladesh/bd"
+      ],
+      "covers": null,
+      "languages": [
+        "Bengali"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 55,
+      "name": "Nepal",
+      "tier": "M40",
+      "region": "South Asia",
+      "paths": [
+        "/south-asia/nepal/np"
+      ],
+      "covers": null,
+      "languages": [
+        "Nepali"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 56,
+      "name": "Pakistan",
+      "tier": "M40",
+      "region": "South Asia",
+      "paths": [
+        "/south-asia/pakistan/pk"
+      ],
+      "covers": null,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 57,
+      "name": "Malaysia",
+      "tier": "M40",
+      "region": "Southeast Asia",
+      "paths": [
+        "/southeast-asia/malaysia/my"
+      ],
+      "covers": null,
+      "languages": [
+        "Malay"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Kuala Lumpur",
+          "country": "Malaysia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 58,
+      "name": "Myanmar",
+      "tier": "M40",
+      "region": "Southeast Asia",
+      "paths": [
+        "/southeast-asia/myanmar/mm"
+      ],
+      "covers": null,
+      "languages": [
+        "Burmese"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 59,
+      "name": "Philippines",
+      "tier": "M40",
+      "region": "Southeast Asia",
+      "paths": [
+        "/southeast-asia/philippines/ph"
+      ],
+      "covers": null,
+      "languages": [
+        "Filipino",
+        "English"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Manila",
+          "country": "Philippines",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 60,
+      "name": "Singapore",
+      "tier": "M40",
+      "region": "Southeast Asia",
+      "paths": [
+        "/southeast-asia/singapore/sg"
+      ],
+      "covers": null,
+      "languages": [
+        "English",
+        "Malay",
+        "Mandarin Chinese",
+        "Tamil"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 61,
+      "name": "Thailand",
+      "tier": "M40",
+      "region": "Southeast Asia",
+      "paths": [
+        "/southeast-asia/thailand/th"
+      ],
+      "covers": null,
+      "languages": [
+        "Thai"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Bangkok",
+          "country": "Thailand",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 62,
+      "name": "Vietnam",
+      "tier": "M40",
+      "region": "Southeast Asia",
+      "paths": [
+        "/southeast-asia/vietnam/vn"
+      ],
+      "covers": null,
+      "languages": [
+        "Vietnamese"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Hanoi",
+          "country": "Vietnam",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 63,
+      "name": "Mongolia",
+      "tier": "M40",
+      "region": "Asia-Pacific",
+      "paths": [
+        "/asia-pacific/mongolia/mn"
+      ],
+      "covers": null,
+      "languages": [
+        "Mongolian"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [
+        {
+          "city": "Ulaanbaatar",
+          "country": "Mongolia",
+          "university": null,
+          "meetingDay": null,
+          "meetingTime": null,
+          "email": null
+        }
+      ],
+      "photos": [],
+      "owner": null,
+      "existingSites": {
+        "YEF": "yefi.org/mn/"
+      }
+    },
+    {
+      "entryNo": 64,
+      "name": "Taiwan",
+      "tier": "M40",
+      "region": "Asia-Pacific",
+      "paths": [
+        "/asia-pacific/taiwan/tw"
+      ],
+      "covers": null,
+      "languages": [
+        "Mandarin Chinese"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 65,
+      "name": "Rwanda",
+      "tier": "Additional",
+      "region": null,
+      "paths": [],
+      "covers": null,
+      "languages": [
+        "Kinyarwanda",
+        "English",
+        "French",
+        "Swahili"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 66,
+      "name": "Guatemala",
+      "tier": "Additional",
+      "region": "Central America and the Caribbean",
+      "paths": [
+        "/central-america-and-the-caribbean/guatemala/gt"
+      ],
+      "covers": null,
+      "languages": [
+        "Spanish"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 67,
+      "name": "Honduras",
+      "tier": "Additional",
+      "region": "Central America and the Caribbean",
+      "paths": [
+        "/central-america-and-the-caribbean/honduras/hn"
+      ],
+      "covers": null,
+      "languages": [
+        "Spanish"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    },
+    {
+      "entryNo": 68,
+      "name": "Sri Lanka",
+      "tier": "Additional",
+      "region": "South Asia",
+      "paths": [
+        "/south-asia/sri-lanka/lk"
+      ],
+      "covers": null,
+      "languages": [
+        "Sinhala",
+        "Tamil"
+      ],
+      "status": "draft",
+      "standfirst": null,
+      "startedYear": null,
+      "contactEmail": null,
+      "leaderName": null,
+      "leaderRole": null,
+      "locale": null,
+      "chapters": [],
+      "photos": [],
+      "owner": null,
+      "existingSites": null
+    }
+  ]
+}

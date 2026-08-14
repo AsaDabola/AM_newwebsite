@@ -1,0 +1,1255 @@
+{
+  "generated": "tools/content/build-routes.js",
+  "hqSegment": "intl",
+  "regions": [
+    {
+      "name": "South America",
+      "slug": "south-america",
+      "count": 8
+    },
+    {
+      "name": "North America",
+      "slug": "north-america",
+      "count": 3
+    },
+    {
+      "name": "Europe",
+      "slug": "europe",
+      "count": 18
+    },
+    {
+      "name": "South Asia",
+      "slug": "south-asia",
+      "count": 5
+    },
+    {
+      "name": "Southeast Asia",
+      "slug": "southeast-asia",
+      "count": 7
+    },
+    {
+      "name": "Asia-Pacific",
+      "slug": "asia-pacific",
+      "count": 4
+    },
+    {
+      "name": "Africa",
+      "slug": "africa",
+      "count": 18
+    },
+    {
+      "name": "Oceania",
+      "slug": "oceania",
+      "count": 3
+    },
+    {
+      "name": "Commonwealth of Independent States",
+      "slug": "commonwealth-of-independent-states",
+      "count": 2
+    },
+    {
+      "name": "Middle East and North Africa",
+      "slug": "middle-east-and-north-africa",
+      "count": 4
+    },
+    {
+      "name": "Central America and the Caribbean",
+      "slug": "central-america-and-the-caribbean",
+      "count": 4
+    }
+  ],
+  "routes": [
+    {
+      "path": "/south-america/brazil/br",
+      "region": "South America",
+      "regionSlug": "south-america",
+      "country": "Brazil",
+      "countrySlug": "brazil",
+      "code": "br",
+      "entryNo": 1,
+      "entryName": "Brazil",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "Portuguese"
+      ]
+    },
+    {
+      "path": "/north-america/canada/ca",
+      "region": "North America",
+      "regionSlug": "north-america",
+      "country": "Canada",
+      "countrySlug": "canada",
+      "code": "ca",
+      "entryNo": 2,
+      "entryName": "Canada",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "English",
+        "French"
+      ]
+    },
+    {
+      "path": "/south-america/colombia/co",
+      "region": "South America",
+      "regionSlug": "south-america",
+      "country": "Colombia",
+      "countrySlug": "colombia",
+      "code": "co",
+      "entryNo": 3,
+      "entryName": "Colombia",
+      "tier": "G20",
+      "grouped": true,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "path": "/south-america/venezuela/ve",
+      "region": "South America",
+      "regionSlug": "south-america",
+      "country": "Venezuela",
+      "countrySlug": "venezuela",
+      "code": "ve",
+      "entryNo": 3,
+      "entryName": "Colombia",
+      "tier": "G20",
+      "grouped": true,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "path": "/south-america/ecuador/ec",
+      "region": "South America",
+      "regionSlug": "south-america",
+      "country": "Ecuador",
+      "countrySlug": "ecuador",
+      "code": "ec",
+      "entryNo": 3,
+      "entryName": "Colombia",
+      "tier": "G20",
+      "grouped": true,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "path": "/south-america/panama/pa",
+      "region": "South America",
+      "regionSlug": "south-america",
+      "country": "Panama",
+      "countrySlug": "panama",
+      "code": "pa",
+      "entryNo": 3,
+      "entryName": "Colombia",
+      "tier": "G20",
+      "grouped": true,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "path": "/europe/france/fr",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "France",
+      "countrySlug": "france",
+      "code": "fr",
+      "entryNo": 4,
+      "entryName": "France",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "French"
+      ]
+    },
+    {
+      "path": "/europe/germany/de",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Germany",
+      "countrySlug": "germany",
+      "code": "de",
+      "entryNo": 5,
+      "entryName": "Germany",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "German"
+      ]
+    },
+    {
+      "path": "/south-asia/india/in",
+      "region": "South Asia",
+      "regionSlug": "south-asia",
+      "country": "India",
+      "countrySlug": "india",
+      "code": "in",
+      "entryNo": 6,
+      "entryName": "India",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "Hindi",
+        "English"
+      ]
+    },
+    {
+      "path": "/southeast-asia/indonesia/id",
+      "region": "Southeast Asia",
+      "regionSlug": "southeast-asia",
+      "country": "Indonesia",
+      "countrySlug": "indonesia",
+      "code": "id",
+      "entryNo": 7,
+      "entryName": "Indonesia",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "Indonesian"
+      ]
+    },
+    {
+      "path": "/europe/italy/it",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Italy",
+      "countrySlug": "italy",
+      "code": "it",
+      "entryNo": 8,
+      "entryName": "Italy",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "Italian"
+      ]
+    },
+    {
+      "path": "/asia-pacific/japan/jp",
+      "region": "Asia-Pacific",
+      "regionSlug": "asia-pacific",
+      "country": "Japan",
+      "countrySlug": "japan",
+      "code": "jp",
+      "entryNo": 9,
+      "entryName": "Japan",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "Japanese"
+      ]
+    },
+    {
+      "path": "/africa/kenya/ke",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Kenya",
+      "countrySlug": "kenya",
+      "code": "ke",
+      "entryNo": 10,
+      "entryName": "East Federal Africa",
+      "tier": "G20",
+      "grouped": true,
+      "languages": [
+        "English",
+        "Swahili",
+        "French",
+        "Kinyarwanda",
+        "Kirundi"
+      ]
+    },
+    {
+      "path": "/africa/tanzania/tz",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Tanzania",
+      "countrySlug": "tanzania",
+      "code": "tz",
+      "entryNo": 10,
+      "entryName": "East Federal Africa",
+      "tier": "G20",
+      "grouped": true,
+      "languages": [
+        "English",
+        "Swahili",
+        "French",
+        "Kinyarwanda",
+        "Kirundi"
+      ]
+    },
+    {
+      "path": "/africa/uganda/ug",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Uganda",
+      "countrySlug": "uganda",
+      "code": "ug",
+      "entryNo": 10,
+      "entryName": "East Federal Africa",
+      "tier": "G20",
+      "grouped": true,
+      "languages": [
+        "English",
+        "Swahili",
+        "French",
+        "Kinyarwanda",
+        "Kirundi"
+      ]
+    },
+    {
+      "path": "/africa/rwanda/rw",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Rwanda",
+      "countrySlug": "rwanda",
+      "code": "rw",
+      "entryNo": 10,
+      "entryName": "East Federal Africa",
+      "tier": "G20",
+      "grouped": true,
+      "languages": [
+        "English",
+        "Swahili",
+        "French",
+        "Kinyarwanda",
+        "Kirundi"
+      ]
+    },
+    {
+      "path": "/africa/burundi/bi",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Burundi",
+      "countrySlug": "burundi",
+      "code": "bi",
+      "entryNo": 10,
+      "entryName": "East Federal Africa",
+      "tier": "G20",
+      "grouped": true,
+      "languages": [
+        "English",
+        "Swahili",
+        "French",
+        "Kinyarwanda",
+        "Kirundi"
+      ]
+    },
+    {
+      "path": "/africa/south-sudan/ss",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "South Sudan",
+      "countrySlug": "south-sudan",
+      "code": "ss",
+      "entryNo": 10,
+      "entryName": "East Federal Africa",
+      "tier": "G20",
+      "grouped": true,
+      "languages": [
+        "English",
+        "Swahili",
+        "French",
+        "Kinyarwanda",
+        "Kirundi"
+      ]
+    },
+    {
+      "path": "/asia-pacific/south-korea/kr",
+      "region": "Asia-Pacific",
+      "regionSlug": "asia-pacific",
+      "country": "South Korea",
+      "countrySlug": "south-korea",
+      "code": "kr",
+      "entryNo": 11,
+      "entryName": "South Korea",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "Korean"
+      ]
+    },
+    {
+      "path": "/north-america/mexico/mx",
+      "region": "North America",
+      "regionSlug": "north-america",
+      "country": "Mexico",
+      "countrySlug": "mexico",
+      "code": "mx",
+      "entryNo": 12,
+      "entryName": "Mexico",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "path": "/africa/nigeria/ng",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Nigeria",
+      "countrySlug": "nigeria",
+      "code": "ng",
+      "entryNo": 13,
+      "entryName": "Nigeria",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "path": "/oceania/australia/au",
+      "region": "Oceania",
+      "regionSlug": "oceania",
+      "country": "Australia",
+      "countrySlug": "australia",
+      "code": "au",
+      "entryNo": 14,
+      "entryName": "Australia",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "path": "/commonwealth-of-independent-states/russia/ru",
+      "region": "Commonwealth of Independent States",
+      "regionSlug": "commonwealth-of-independent-states",
+      "country": "Russia",
+      "countrySlug": "russia",
+      "code": "ru",
+      "entryNo": 15,
+      "entryName": "Russia",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "Russian"
+      ]
+    },
+    {
+      "path": "/africa/south-africa/za",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "South Africa",
+      "countrySlug": "south-africa",
+      "code": "za",
+      "entryNo": 16,
+      "entryName": "South Africa",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "English",
+        "Afrikaans",
+        "Zulu",
+        "Xhosa",
+        "and others"
+      ]
+    },
+    {
+      "path": "/europe/spain/es",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Spain",
+      "countrySlug": "spain",
+      "code": "es",
+      "entryNo": 17,
+      "entryName": "Spain",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "path": "/middle-east-and-north-africa/turkey/tr",
+      "region": "Middle East and North Africa",
+      "regionSlug": "middle-east-and-north-africa",
+      "country": "Turkey",
+      "countrySlug": "turkey",
+      "code": "tr",
+      "entryNo": 18,
+      "entryName": "Turkey",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "Turkish"
+      ]
+    },
+    {
+      "path": "/europe/united-kingdom/gb",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "United Kingdom",
+      "countrySlug": "united-kingdom",
+      "code": "gb",
+      "entryNo": 19,
+      "entryName": "United Kingdom",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "path": "/north-america/united-states/us",
+      "region": "North America",
+      "regionSlug": "north-america",
+      "country": "United States",
+      "countrySlug": "united-states",
+      "code": "us",
+      "entryNo": 20,
+      "entryName": "United States",
+      "tier": "G20",
+      "grouped": false,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "path": "/africa/angola/ao",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Angola",
+      "countrySlug": "angola",
+      "code": "ao",
+      "entryNo": 21,
+      "entryName": "Angola",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Portuguese"
+      ]
+    },
+    {
+      "path": "/africa/cameroon/cm",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Cameroon",
+      "countrySlug": "cameroon",
+      "code": "cm",
+      "entryNo": 22,
+      "entryName": "Cameroon",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "French",
+        "English"
+      ]
+    },
+    {
+      "path": "/africa/democratic-republic-of-the-congo/cd",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Democratic Republic of the Congo",
+      "countrySlug": "democratic-republic-of-the-congo",
+      "code": "cd",
+      "entryNo": 23,
+      "entryName": "Democratic Republic of the Congo",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "French"
+      ]
+    },
+    {
+      "path": "/africa/ethiopia/et",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Ethiopia",
+      "countrySlug": "ethiopia",
+      "code": "et",
+      "entryNo": 24,
+      "entryName": "Ethiopia",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Amharic",
+        "English"
+      ]
+    },
+    {
+      "path": "/africa/ghana/gh",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Ghana",
+      "countrySlug": "ghana",
+      "code": "gh",
+      "entryNo": 25,
+      "entryName": "Ghana",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "path": "/africa/cote-divoire/ci",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Côte d'Ivoire",
+      "countrySlug": "cote-divoire",
+      "code": "ci",
+      "entryNo": 26,
+      "entryName": "Côte d'Ivoire",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "French"
+      ]
+    },
+    {
+      "path": "/africa/madagascar/mg",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Madagascar",
+      "countrySlug": "madagascar",
+      "code": "mg",
+      "entryNo": 27,
+      "entryName": "Madagascar",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Malagasy",
+        "French"
+      ]
+    },
+    {
+      "path": "/africa/mozambique/mz",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Mozambique",
+      "countrySlug": "mozambique",
+      "code": "mz",
+      "entryNo": 28,
+      "entryName": "Mozambique",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Portuguese"
+      ]
+    },
+    {
+      "path": "/africa/zambia/zm",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Zambia",
+      "countrySlug": "zambia",
+      "code": "zm",
+      "entryNo": 29,
+      "entryName": "Zambia",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "path": "/europe/austria/at",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Austria",
+      "countrySlug": "austria",
+      "code": "at",
+      "entryNo": 30,
+      "entryName": "Austria",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "German"
+      ]
+    },
+    {
+      "path": "/europe/belgium/be",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Belgium",
+      "countrySlug": "belgium",
+      "code": "be",
+      "entryNo": 31,
+      "entryName": "Belgium",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Dutch",
+        "French",
+        "German"
+      ]
+    },
+    {
+      "path": "/europe/czechia/cz",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Czechia",
+      "countrySlug": "czechia",
+      "code": "cz",
+      "entryNo": 32,
+      "entryName": "Czechia",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Czech"
+      ]
+    },
+    {
+      "path": "/europe/slovakia/sk",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Slovakia",
+      "countrySlug": "slovakia",
+      "code": "sk",
+      "entryNo": 33,
+      "entryName": "Slovakia",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Slovak"
+      ]
+    },
+    {
+      "path": "/europe/greece/gr",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Greece",
+      "countrySlug": "greece",
+      "code": "gr",
+      "entryNo": 34,
+      "entryName": "Greece",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Greek"
+      ]
+    },
+    {
+      "path": "/europe/hungary/hu",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Hungary",
+      "countrySlug": "hungary",
+      "code": "hu",
+      "entryNo": 35,
+      "entryName": "Hungary",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Hungarian"
+      ]
+    },
+    {
+      "path": "/europe/netherlands/nl",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Netherlands",
+      "countrySlug": "netherlands",
+      "code": "nl",
+      "entryNo": 36,
+      "entryName": "Netherlands",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Dutch"
+      ]
+    },
+    {
+      "path": "/europe/poland/pl",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Poland",
+      "countrySlug": "poland",
+      "code": "pl",
+      "entryNo": 37,
+      "entryName": "Poland",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Polish"
+      ]
+    },
+    {
+      "path": "/europe/portugal/pt",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Portugal",
+      "countrySlug": "portugal",
+      "code": "pt",
+      "entryNo": 38,
+      "entryName": "Portugal",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Portuguese"
+      ]
+    },
+    {
+      "path": "/europe/romania/ro",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Romania",
+      "countrySlug": "romania",
+      "code": "ro",
+      "entryNo": 39,
+      "entryName": "Romania",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Romanian"
+      ]
+    },
+    {
+      "path": "/europe/sweden/se",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Sweden",
+      "countrySlug": "sweden",
+      "code": "se",
+      "entryNo": 40,
+      "entryName": "Sweden",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Swedish"
+      ]
+    },
+    {
+      "path": "/europe/switzerland/ch",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Switzerland",
+      "countrySlug": "switzerland",
+      "code": "ch",
+      "entryNo": 41,
+      "entryName": "Switzerland",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "German",
+        "French",
+        "Italian",
+        "Romansh"
+      ]
+    },
+    {
+      "path": "/europe/ukraine/ua",
+      "region": "Europe",
+      "regionSlug": "europe",
+      "country": "Ukraine",
+      "countrySlug": "ukraine",
+      "code": "ua",
+      "entryNo": 42,
+      "entryName": "Ukraine",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Ukrainian"
+      ]
+    },
+    {
+      "path": "/central-america-and-the-caribbean/dominican-republic/do",
+      "region": "Central America and the Caribbean",
+      "regionSlug": "central-america-and-the-caribbean",
+      "country": "Dominican Republic",
+      "countrySlug": "dominican-republic",
+      "code": "do",
+      "entryNo": 43,
+      "entryName": "Dominican Republic",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "path": "/central-america-and-the-caribbean/haiti/ht",
+      "region": "Central America and the Caribbean",
+      "regionSlug": "central-america-and-the-caribbean",
+      "country": "Haiti",
+      "countrySlug": "haiti",
+      "code": "ht",
+      "entryNo": 44,
+      "entryName": "Haiti",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "French",
+        "Haitian Creole"
+      ]
+    },
+    {
+      "path": "/south-america/argentina/ar",
+      "region": "South America",
+      "regionSlug": "south-america",
+      "country": "Argentina",
+      "countrySlug": "argentina",
+      "code": "ar",
+      "entryNo": 45,
+      "entryName": "Argentina",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "path": "/south-america/chile/cl",
+      "region": "South America",
+      "regionSlug": "south-america",
+      "country": "Chile",
+      "countrySlug": "chile",
+      "code": "cl",
+      "entryNo": 46,
+      "entryName": "Chile",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "path": "/south-america/peru/pe",
+      "region": "South America",
+      "regionSlug": "south-america",
+      "country": "Peru",
+      "countrySlug": "peru",
+      "code": "pe",
+      "entryNo": 47,
+      "entryName": "Peru",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "path": "/commonwealth-of-independent-states/kazakhstan/kz",
+      "region": "Commonwealth of Independent States",
+      "regionSlug": "commonwealth-of-independent-states",
+      "country": "Kazakhstan",
+      "countrySlug": "kazakhstan",
+      "code": "kz",
+      "entryNo": 48,
+      "entryName": "Kazakhstan",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Kazakh",
+        "Russian"
+      ]
+    },
+    {
+      "path": "/middle-east-and-north-africa/egypt/eg",
+      "region": "Middle East and North Africa",
+      "regionSlug": "middle-east-and-north-africa",
+      "country": "Egypt",
+      "countrySlug": "egypt",
+      "code": "eg",
+      "entryNo": 49,
+      "entryName": "Egypt",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Arabic"
+      ]
+    },
+    {
+      "path": "/middle-east-and-north-africa/israel/il",
+      "region": "Middle East and North Africa",
+      "regionSlug": "middle-east-and-north-africa",
+      "country": "Israel",
+      "countrySlug": "israel",
+      "code": "il",
+      "entryNo": 50,
+      "entryName": "Israel",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Hebrew",
+        "Arabic"
+      ]
+    },
+    {
+      "path": "/middle-east-and-north-africa/united-arab-emirates/ae",
+      "region": "Middle East and North Africa",
+      "regionSlug": "middle-east-and-north-africa",
+      "country": "United Arab Emirates",
+      "countrySlug": "united-arab-emirates",
+      "code": "ae",
+      "entryNo": 51,
+      "entryName": "United Arab Emirates",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Arabic"
+      ]
+    },
+    {
+      "path": "/oceania/new-zealand/nz",
+      "region": "Oceania",
+      "regionSlug": "oceania",
+      "country": "New Zealand",
+      "countrySlug": "new-zealand",
+      "code": "nz",
+      "entryNo": 52,
+      "entryName": "New Zealand",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "path": "/oceania/fiji/fj",
+      "region": "Oceania",
+      "regionSlug": "oceania",
+      "country": "Fiji",
+      "countrySlug": "fiji",
+      "code": "fj",
+      "entryNo": 53,
+      "entryName": "Fiji",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "English",
+        "Fijian",
+        "Fiji Hindi"
+      ]
+    },
+    {
+      "path": "/south-asia/bangladesh/bd",
+      "region": "South Asia",
+      "regionSlug": "south-asia",
+      "country": "Bangladesh",
+      "countrySlug": "bangladesh",
+      "code": "bd",
+      "entryNo": 54,
+      "entryName": "Bangladesh",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Bengali"
+      ]
+    },
+    {
+      "path": "/south-asia/nepal/np",
+      "region": "South Asia",
+      "regionSlug": "south-asia",
+      "country": "Nepal",
+      "countrySlug": "nepal",
+      "code": "np",
+      "entryNo": 55,
+      "entryName": "Nepal",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Nepali"
+      ]
+    },
+    {
+      "path": "/south-asia/pakistan/pk",
+      "region": "South Asia",
+      "regionSlug": "south-asia",
+      "country": "Pakistan",
+      "countrySlug": "pakistan",
+      "code": "pk",
+      "entryNo": 56,
+      "entryName": "Pakistan",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Urdu",
+        "English"
+      ]
+    },
+    {
+      "path": "/southeast-asia/malaysia/my",
+      "region": "Southeast Asia",
+      "regionSlug": "southeast-asia",
+      "country": "Malaysia",
+      "countrySlug": "malaysia",
+      "code": "my",
+      "entryNo": 57,
+      "entryName": "Malaysia",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Malay"
+      ]
+    },
+    {
+      "path": "/southeast-asia/myanmar/mm",
+      "region": "Southeast Asia",
+      "regionSlug": "southeast-asia",
+      "country": "Myanmar",
+      "countrySlug": "myanmar",
+      "code": "mm",
+      "entryNo": 58,
+      "entryName": "Myanmar",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Burmese"
+      ]
+    },
+    {
+      "path": "/southeast-asia/philippines/ph",
+      "region": "Southeast Asia",
+      "regionSlug": "southeast-asia",
+      "country": "Philippines",
+      "countrySlug": "philippines",
+      "code": "ph",
+      "entryNo": 59,
+      "entryName": "Philippines",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Filipino",
+        "English"
+      ]
+    },
+    {
+      "path": "/southeast-asia/singapore/sg",
+      "region": "Southeast Asia",
+      "regionSlug": "southeast-asia",
+      "country": "Singapore",
+      "countrySlug": "singapore",
+      "code": "sg",
+      "entryNo": 60,
+      "entryName": "Singapore",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "English",
+        "Malay",
+        "Mandarin Chinese",
+        "Tamil"
+      ]
+    },
+    {
+      "path": "/southeast-asia/thailand/th",
+      "region": "Southeast Asia",
+      "regionSlug": "southeast-asia",
+      "country": "Thailand",
+      "countrySlug": "thailand",
+      "code": "th",
+      "entryNo": 61,
+      "entryName": "Thailand",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Thai"
+      ]
+    },
+    {
+      "path": "/southeast-asia/vietnam/vn",
+      "region": "Southeast Asia",
+      "regionSlug": "southeast-asia",
+      "country": "Vietnam",
+      "countrySlug": "vietnam",
+      "code": "vn",
+      "entryNo": 62,
+      "entryName": "Vietnam",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Vietnamese"
+      ]
+    },
+    {
+      "path": "/asia-pacific/mongolia/mn",
+      "region": "Asia-Pacific",
+      "regionSlug": "asia-pacific",
+      "country": "Mongolia",
+      "countrySlug": "mongolia",
+      "code": "mn",
+      "entryNo": 63,
+      "entryName": "Mongolia",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Mongolian"
+      ]
+    },
+    {
+      "path": "/asia-pacific/taiwan/tw",
+      "region": "Asia-Pacific",
+      "regionSlug": "asia-pacific",
+      "country": "Taiwan",
+      "countrySlug": "taiwan",
+      "code": "tw",
+      "entryNo": 64,
+      "entryName": "Taiwan",
+      "tier": "M40",
+      "grouped": false,
+      "languages": [
+        "Mandarin Chinese"
+      ]
+    },
+    {
+      "path": "/africa/rwanda/rw",
+      "region": "Africa",
+      "regionSlug": "africa",
+      "country": "Rwanda",
+      "countrySlug": "rwanda",
+      "code": "rw",
+      "entryNo": 65,
+      "entryName": "Rwanda",
+      "tier": "Additional",
+      "grouped": false,
+      "languages": [
+        "Kinyarwanda",
+        "English",
+        "French",
+        "Swahili"
+      ]
+    },
+    {
+      "path": "/central-america-and-the-caribbean/guatemala/gt",
+      "region": "Central America and the Caribbean",
+      "regionSlug": "central-america-and-the-caribbean",
+      "country": "Guatemala",
+      "countrySlug": "guatemala",
+      "code": "gt",
+      "entryNo": 66,
+      "entryName": "Guatemala",
+      "tier": "Additional",
+      "grouped": false,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "path": "/central-america-and-the-caribbean/honduras/hn",
+      "region": "Central America and the Caribbean",
+      "regionSlug": "central-america-and-the-caribbean",
+      "country": "Honduras",
+      "countrySlug": "honduras",
+      "code": "hn",
+      "entryNo": 67,
+      "entryName": "Honduras",
+      "tier": "Additional",
+      "grouped": false,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "path": "/south-asia/sri-lanka/lk",
+      "region": "South Asia",
+      "regionSlug": "south-asia",
+      "country": "Sri Lanka",
+      "countrySlug": "sri-lanka",
+      "code": "lk",
+      "entryNo": 68,
+      "entryName": "Sri Lanka",
+      "tier": "Additional",
+      "grouped": false,
+      "languages": [
+        "Sinhala",
+        "Tamil"
+      ]
+    }
+  ]
+}

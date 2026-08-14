@@ -1,0 +1,58 @@
+# web — the Next.js app
+
+Deploys to Vercel. Static generation for every country page; the CMS and
+database are documented in `docs/vercel-neon-stack.md`.
+
+## Routes
+
+```
+/                        308 → /intl
+/intl                    the international HQ site
+/{region}                11 region indexes
+/{region}/{country}/{code}   75 country sites
+```
+
+Paths come from `data/routes.json`, generated from the mission country list:
+
+```
+node tools/content/build-routes.js
+```
+
+It exits non-zero on a route problem — today it reports one, the
+`/africa/rwanda/rw` collision between the East Federal Africa group and the
+standalone Rwanda entry. `npm run build` runs it first, so a route problem
+fails the build rather than shipping a broken URL.
+
+## Environment
+
+| Variable | Without it |
+|---|---|
+| `POSTGRES_URL` | Builds from `data/country-seed.json`. No CMS |
+| `PAYLOAD_SECRET` | Required by Payload; any long random string |
+| `BLOB_READ_WRITE_TOKEN` | Uploads go to local disk. **Must be set in production** — see `docs/media-storage.md` |
+| `NEXT_PUBLIC_SERVER_URL` | Admin and CORS use it; defaults to localhost |
+
+See `.env.example`. The app builds and deploys with none of them set.
+
+## Local
+
+```
+cd web
+npm install
+npm run dev
+```
+
+## How the subdirectory sites work
+
+Three files serve 87 URLs — see `docs/subdirectory-sites-on-vercel.md`. There
+is nothing to configure in the Vercel dashboard beyond setting **Root
+Directory** to `web`.
+
+Adding a country is three commands: edit `tools/content/countries.js`, run
+`node tools/content/build-routes.js`, commit.
+
+## Status
+
+Routing and static generation work. Components are placeholders holding the
+copy from `content-pack/`, awaiting the Figma design — see
+`docs/figma-handoff.md`.
