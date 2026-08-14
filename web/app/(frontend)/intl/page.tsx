@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { REGIONS, uniquePaths } from '../../lib/routes';
+import { REGIONS, uniquePaths } from '@/lib/routes';
 
 /**
  * The international HQ site at /intl.

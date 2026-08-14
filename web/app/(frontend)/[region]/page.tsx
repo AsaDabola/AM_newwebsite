@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { REGIONS, findRegion, countriesInRegion } from '../../lib/routes';
+import { REGIONS, findRegion, countriesInRegion } from '@/lib/routes';
 
 /** A region index: /africa, /europe, /southeast-asia — the middle segment. */
 

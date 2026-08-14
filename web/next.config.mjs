@@ -1,3 +1,5 @@
+import { withPayload } from '@payloadcms/next/withPayload';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // The HQ site lives at /intl, so the bare domain has to go somewhere.
@@ -8,4 +10,6 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+// withPayload wires the admin bundle into the Next build. It is a no-op for
+// the public pages, which stay statically generated.
+export default withPayload(nextConfig, { devBundleServerPackages: false });

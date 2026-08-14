@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { findRoute, siblingsOf, uniquePaths } from '../../../../lib/routes';
-import { getCountryContent, missingFields, pageState } from '../../../../lib/content';
+import { findRoute, siblingsOf, uniquePaths } from '@/lib/routes';
+import { getCountryContent, missingFields, pageState } from '@/lib/content';
 
 /**
  * A country site: /{region}/{country}/{code}, e.g. /africa/kenya/ke
@@ -36,7 +36,7 @@ export async function generateMetadata({
   const route = findRoute(region, country, code);
   if (!route) return {};
 
-  const content = getCountryContent(route);
+  const content = await getCountryContent(route);
 
   return {
     title: `AM in ${route.country} — Apostolos Missions International`,
@@ -56,7 +56,7 @@ export default async function CountryPage({
   const route = findRoute(region, country, code);
   if (!route) notFound();
 
-  const content = getCountryContent(route);
+  const content = await getCountryContent(route);
   const state = pageState(content);
   const missing = missingFields(content);
   const siblings = siblingsOf(route);

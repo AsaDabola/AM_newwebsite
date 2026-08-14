@@ -20,7 +20,7 @@ const { COUNTRIES } = require('./countries.js');
 const { buildRoutes, validate } = require('./routes.js');
 const CHAPTERS = require('./chapters.js');
 
-const OUT = path.join(__dirname, '..', '..', 'data', 'country-seed.json');
+const OUT = path.join(__dirname, '..', '..', 'web', 'data', 'country-seed.json');
 
 /**
  * Chapter records name their country as it appears on the current site.

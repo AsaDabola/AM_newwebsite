@@ -13,7 +13,7 @@ const { buildRoutes, validate, regions, HQ_SEGMENT } = require('./routes.js');
 
 const ROOT = path.join(__dirname, '..', '..');
 const MD = path.join(ROOT, 'docs', 'routes.md');
-const JSON_OUT = path.join(ROOT, 'data', 'routes.json');
+const JSON_OUT = path.join(ROOT, 'web', 'data', 'routes.json');
 
 const routes = buildRoutes();
 const problems = validate(routes);
@@ -46,9 +46,12 @@ if (problems.length) {
   lines.push(
     '## ⚠ Problems to resolve',
     '',
-    '| Kind | Path | Detail |',
-    '|---|---|---|',
-    ...problems.map((p) => `| ${p.kind} | \`${p.path}\` | ${p.detail} |`),
+    '| Kind | Path | Detail | Status |',
+    '|---|---|---|---|',
+    ...problems.map(
+      (p) =>
+        `| ${p.kind} | \`${p.path}\` | ${p.detail} | ${p.acknowledged ? 'known, awaiting a decision' : '**new**'} |`
+    ),
     ''
   );
 } else {
@@ -92,8 +95,23 @@ fs.writeFileSync(
 console.log(`wrote ${MD}`);
 console.log(`wrote ${JSON_OUT}`);
 console.log(`${routes.length} routes, ${unique} unique, ${groups.length} regions`);
-if (problems.length) {
-  console.log(`\n${problems.length} problem(s):`);
-  problems.forEach((p) => console.log(`  [${p.kind}] ${p.path} — ${p.detail}`));
+const blocking = problems.filter((p) => !p.acknowledged);
+const known = problems.filter((p) => p.acknowledged);
+
+if (known.length) {
+  console.log(`\n${known.length} known, unresolved:`);
+  known.forEach((p) => {
+    console.log(`  [${p.kind}] ${p.path} — ${p.detail}`);
+    console.log(`    ${p.acknowledged}`);
+  });
+}
+
+if (blocking.length) {
+  console.log(`\n${blocking.length} NEW problem(s) — the build stops here:`);
+  blocking.forEach((p) => console.log(`  [${p.kind}] ${p.path} — ${p.detail}`));
+  console.log(
+    '\nFix the country list, or add the path to ACKNOWLEDGED in tools/content/routes.js\n' +
+      'with the decision that is pending.'
+  );
   process.exitCode = 1;
 }

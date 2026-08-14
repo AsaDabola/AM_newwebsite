@@ -6,7 +6,7 @@
  * database and no network to know every country URL.
  */
 
-import manifest from '../../data/routes.json';
+import manifest from '../data/routes.json';
 
 export type Tier = 'G20' | 'M40' | 'Additional';
 

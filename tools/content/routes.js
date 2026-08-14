@@ -21,6 +21,22 @@ const { COUNTRIES } = require('./countries.js');
 const HQ_SEGMENT = 'intl';
 
 /**
+ * Route problems AM has seen and not yet decided on.
+ *
+ * An acknowledged problem still prints on every build; it just does not fail
+ * the build. Anything *not* listed here does fail it, so a new collision
+ * introduced by an edit to the country list cannot reach production quietly.
+ *
+ * Remove an entry the moment the decision is made.
+ */
+const ACKNOWLEDGED = {
+  '/africa/rwanda/rw':
+    'Rwanda appears twice — inside the East Federal Africa group (entry 10) and ' +
+    'as additional country 65. The group currently wins. Pending AM: does Rwanda ' +
+    'belong to the group, or is it standalone?',
+};
+
+/**
  * Regions for the entries the spreadsheet leaves unassigned. "North America"
  * is the one region name not present in the source — the M40 block has no
  * North American countries, so it never needed one.
@@ -138,6 +154,7 @@ function validate(routes) {
         kind: 'duplicate path',
         path: r.path,
         detail: `claimed by entry ${prior.entryNo} "${prior.entryName}" and entry ${r.entryNo} "${r.entryName}"`,
+        acknowledged: ACKNOWLEDGED[r.path] || null,
       });
     } else {
       seen.set(r.path, r);
@@ -148,6 +165,7 @@ function validate(routes) {
         kind: 'reserved segment',
         path: r.path,
         detail: `region slug collides with the HQ site at /${HQ_SEGMENT}`,
+        acknowledged: ACKNOWLEDGED[r.path] || null,
       });
     }
   }
@@ -165,4 +183,12 @@ function regions(routes) {
   return [...out.values()];
 }
 
-module.exports = { buildRoutes, validate, regions, slug, HQ_SEGMENT, REGION_BY_COUNTRY };
+module.exports = {
+  buildRoutes,
+  validate,
+  regions,
+  slug,
+  HQ_SEGMENT,
+  REGION_BY_COUNTRY,
+  ACKNOWLEDGED,
+};

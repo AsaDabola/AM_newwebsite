@@ -19,9 +19,9 @@ each get their own URL but share the East Federal Africa site.
 
 ## ⚠ Problems to resolve
 
-| Kind | Path | Detail |
-|---|---|---|
-| duplicate path | `/africa/rwanda/rw` | claimed by entry 10 "East Federal Africa" and entry 65 "Rwanda" |
+| Kind | Path | Detail | Status |
+|---|---|---|---|
+| duplicate path | `/africa/rwanda/rw` | claimed by entry 10 "East Federal Africa" and entry 65 "Rwanda" | known, awaiting a decision |
 
 ---
 
