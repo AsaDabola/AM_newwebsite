@@ -31,6 +31,15 @@ npm install
 npm run dev
 ```
 
+## How the subdirectory sites work
+
+Three files serve 87 URLs — see `docs/subdirectory-sites-on-vercel.md`. There
+is nothing to configure in the Vercel dashboard beyond setting **Root
+Directory** to `web`.
+
+Adding a country is three commands: edit `tools/content/countries.js`, run
+`node tools/content/build-routes.js`, commit.
+
 ## Status
 
 Routing and static generation work. Components are placeholders holding the
