@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import './globals.css';
-import { SiteHeader } from './components/site-header';
-import { SiteFooter } from './components/site-footer';
+import '../globals.css';
 
 /**
  * Root layout for the public site.
@@ -11,9 +9,8 @@ import { SiteFooter } from './components/site-footer';
  * groups each carrying a layout, with no app/layout.tsx, is the Payload 3
  * pattern — it keeps the admin's styling out of the public pages entirely.
  *
- * globals.css is the same design system as the static site and the
- * WordPress theme (assets/css/main.css) — one set of tokens and components,
- * ported here so the three frontends stay visually identical.
+ * globals.css is Figma-sourced only — see the note at the top of that file.
+ * It deliberately does not reuse the legacy static site's design system.
  */
 
 export const metadata: Metadata = {
@@ -24,11 +21,7 @@ export const metadata: Metadata = {
 export default function FrontendLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <SiteHeader />
-        {children}
-        <SiteFooter />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
