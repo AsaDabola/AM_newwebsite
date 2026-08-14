@@ -51,6 +51,12 @@ Directory** to `web`.
 Adding a country is three commands: edit `tools/content/countries.js`, run
 `node tools/content/build-routes.js`, commit.
 
+## Deploying
+
+**Vercel Root Directory must be `web`.** Without it Vercel serves the old
+static site at the repo root and `/admin` returns that site's 404 page — see
+`docs/deploying-to-vercel.md`.
+
 ## Status
 
 Routing and static generation work. Components are placeholders holding the
