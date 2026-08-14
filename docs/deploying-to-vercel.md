@@ -27,22 +27,49 @@ designed AM page, which is exactly why it does not look like an error.
 
 ### How to tell which one you are looking at
 
-| You see | Vercel is serving |
+| You see | What it means |
 |---|---|
-| A 404 with AM navigation and "This page went on mission" | the repo root, static |
-| A Payload login form | `web/`, correctly |
-| `Cannot find module` or a build error mentioning `payload` | `web/`, but a config problem |
+| A 404 with AM navigation and "This page went on mission" | Serving the repo root as static files. Root Directory is not set |
+| `No Output Directory named "public"` | Building `web/`, but Framework Preset is still "Other" |
+| `Cannot find module '../tools/content/build-routes.js'` | Fixed — the build now falls back to the committed manifest |
+| A Payload login form | Working |
+
+---
+
+## If the build fails with `No Output Directory named "public"`
+
+Different problem, and it means progress — Vercel is now running a build
+rather than serving static files. It is failing because the **Framework
+Preset** is still "Other", whose default output directory is `public`. A
+Next.js build writes to `.next`, so Vercel looks in the wrong place and stops.
+
+This happens because the project was first created against a repository that
+had no framework in it. Changing Root Directory does not reset the preset.
+
+**Fix, two settings:**
+
+1. Settings → Build and Deployment → **Framework Preset → Next.js**
+2. In the same panel, clear the **Output Directory** override if one is set —
+   leave it on the framework default. Do not set it to `.next` by hand.
+
+`web/vercel.json` now declares `"framework": "nextjs"` as well, so the repo
+states its own build settings and a future project created from it needs no
+dashboard configuration beyond Root Directory.
 
 ---
 
 ## Full deploy checklist
 
-### 1 · Root Directory
+### 1 · Root Directory and Framework Preset
 
-Settings → Build and Deployment → **Root Directory: `web`**
+Settings → Build and Deployment:
 
-This is the whole fix for the 404. Do it first and redeploy before changing
-anything else.
+- **Root Directory: `web`**
+- **Framework Preset: Next.js**
+- **Output Directory:** leave on the framework default
+
+Both are needed. Root Directory alone gets you from "serving the old static
+site" to "failing to find a `public` directory".
 
 ### 2 · Environment variables
 
@@ -68,11 +95,19 @@ and its pooled variants automatically.
 The build runs, in order:
 
 ```
-build-routes.js            regenerate the 76 country routes
-payload generate:importmap keep the admin's component map current
-migrate-if-configured.mjs  create or update the schema
-next build                 91 pages
+build-routes-if-present.mjs  regenerate the 76 country routes, or verify the
+                             committed manifest when the repo root is not in
+                             the build context
+payload generate:importmap   keep the admin's component map current
+migrate-if-configured.mjs    create or update the schema
+next build                   91 pages
 ```
+
+The first step matters because `tools/` lives above `web/`. With Root
+Directory set, Vercel may upload only `web/`, and a build step reaching
+outside it would fail. `web/data/routes.json` is committed and is what the app
+reads, so the generator is a consistency check rather than a requirement.
+Verified by building a copy of `web/` with nothing above it: 91 pages.
 
 Verified against a fresh empty database: the migration creates 21 tables, then
 the build generates 91 pages. A first deploy needs no manual database step.
