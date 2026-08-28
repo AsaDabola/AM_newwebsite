@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<rect width="64" height="64" rx="12" fill="#1449c6"/>
-<text x="32" y="36" text-anchor="middle" font-family="Archivo, Helvetica, Arial, sans-serif" font-size="27" font-weight="800" letter-spacing="-1.4" fill="#ffffff">AM</text>
-<rect x="16" y="42" width="32" height="2" fill="#ffffff"/>
-<text x="32" y="53" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="6.5" letter-spacing="1.5" fill="#ffffff">INTL</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="96" fill="#1449c6"/>
+<path fill="#ffffff" d="M35.7,303.9l72.9-164.1h39.6l94.6,212.7h-125l-21.3-48.7h70.2l-38-85.6-59.8,134.3H14"/>
+<path fill="#ffffff" d="M484.1,352.6h-48.9v-96.3l-50.4,96.3h-30.5l-50.4-96.3v96.3h-48.9v-212.7h48.9l65.6,130.7,65.7-130.7h48.9v212.7Z"/>
 </svg>
